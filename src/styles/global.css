@@ -1,23 +1,45 @@
 :root {
   color-scheme: light;
 
-  --bg: #f6f6f3;
+  --bg: #d5dcda;
   --surface: #ffffff;
-  --ink: #181b1f;
-  --muted: #545b63;
-  --line: #dcdedb;
-  --accent: #0b6b66;
-  --accent-strong: #084f4b;
-  --accent-soft: #e2f0ee;
+  --surface-2: #edf1ef;
+  --ink: #0e1417;
+  --muted: #3b444a;
+  --line: #768380;
+  --line-soft: #b3bdba;
+  --accent: #075e59;
+  --accent-strong: #04403d;
+  --accent-soft: #cfe9e5;
+  --on-accent: #ffffff;
   --pending-bg: #fff3c4;
   --pending-ink: #6b4a00;
 
   --font-sans: "Inter Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
 
-  --content: 1100px;
-  --gutter: clamp(1.1rem, 4vw, 2rem);
+  --content: 1180px;
+  --gutter: clamp(0.6rem, 3vw, 2rem);
   --header-height: 3.5rem;
+  --gap: clamp(0.9rem, 2.2vw, 1.4rem);
+  --panel-pad: clamp(0.9rem, 4vw, 2.75rem);
+}
+
+/* Dark surfaces: components pick these up through the same variables. */
+.dark {
+  --surface: #0f1c20;
+  --surface-2: #1a2b30;
+  --ink: #ffffff;
+  --muted: #c8d3d0;
+  --line: #64767a;
+  --line-soft: #3b4d52;
+  --accent: #6ddccf;
+  --accent-strong: #a8efe6;
+  --accent-soft: #1a3f40;
+  --on-accent: #06201e;
+
+  background: var(--surface);
+  color: var(--ink);
 }
 
 *,
@@ -50,6 +72,7 @@ body {
 h1,
 h2,
 h3,
+h4,
 p,
 ul,
 ol,
@@ -92,6 +115,78 @@ a:hover {
   margin-inline: auto;
 }
 
+/* Boxes: panels hold a section, .box holds a block inside one. */
+.hero__panel,
+.section > .container,
+.not-found {
+  padding: var(--panel-pad);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  box-shadow: 0 2px 10px rgb(14 20 23 / 14%);
+}
+
+/* One colour per section: every component inside inherits it. */
+.section--projects {
+  --accent: #1d4ed8;
+  --accent-strong: #1e3a8a;
+  --accent-soft: #dbe6ff;
+  --tint: #e9f0ff;
+}
+
+.section--experience {
+  --accent: #075e59;
+  --accent-strong: #04403d;
+  --accent-soft: #cfe9e5;
+  --tint: #e0f3f0;
+}
+
+.section--tfg {
+  --accent: #5b21b6;
+  --accent-strong: #3f1485;
+  --accent-soft: #e6dcfa;
+  --tint: #f0eafc;
+}
+
+.section--skills {
+  --accent: #9a3412;
+  --accent-strong: #6e240a;
+  --accent-soft: #fde3d0;
+  --tint: #fdeee2;
+}
+
+.section--education {
+  --accent: #9f1239;
+  --accent-strong: #720c28;
+  --accent-soft: #fbdbe4;
+  --tint: #fdecf1;
+}
+
+.section--about {
+  --accent: #334155;
+  --accent-strong: #1e293b;
+  --accent-soft: #dde3ec;
+  --tint: #e9edf3;
+}
+
+.section > .container:not(.dark) {
+  --surface: var(--tint);
+  --surface-2: #ffffff;
+
+  border-color: var(--accent);
+}
+
+.box,
+.timeline__item,
+.card,
+.skill-group,
+.loop {
+  padding: clamp(0.8rem, 2.5vw, 1.1rem) clamp(0.8rem, 2.5vw, 1.25rem);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
 .skip-link {
   position: absolute;
   top: -4rem;
@@ -127,7 +222,6 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
 
@@ -164,12 +258,18 @@ a:hover {
   padding-block: 0.15rem;
   color: var(--muted);
   font-size: 0.92rem;
+  font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
 }
 
+.site-nav a {
+  border-bottom: 2px solid transparent;
+}
+
 .site-nav a:hover {
-  color: var(--accent);
+  border-bottom-color: var(--accent);
+  color: var(--accent-strong);
 }
 
 .lang-switch {
@@ -184,6 +284,8 @@ a:hover {
 
 .lang-switch:hover {
   border-color: var(--accent);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 @media (min-width: 860px) {
@@ -227,19 +329,26 @@ a:hover {
 
 .btn:hover {
   border-color: var(--accent);
+  background: var(--accent-soft);
   color: var(--accent-strong);
+}
+
+.btn--small {
+  min-height: 2.3rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.9rem;
 }
 
 .btn--primary {
   border-color: var(--accent);
   background: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .btn--primary:hover {
   border-color: var(--accent-strong);
   background: var(--accent-strong);
-  color: #fff;
+  color: var(--on-accent);
 }
 
 .pending {
@@ -261,12 +370,12 @@ a:hover {
 
 /* Hero */
 .hero {
-  padding-block: clamp(2.5rem, 8vw, 5.5rem) clamp(2.5rem, 6vw, 4rem);
+  padding-top: var(--gap);
 }
 
-.hero__grid {
-  display: grid;
-  gap: 2.25rem;
+.hero__panel {
+  padding-block: clamp(2rem, 6vw, 4rem);
+  background-image: radial-gradient(60rem 32rem at 100% 0, rgb(109 220 207 / 20%), transparent 65%);
 }
 
 .hero__status {
@@ -287,38 +396,44 @@ a:hover {
 }
 
 .hero h1 {
-  font-size: clamp(2.35rem, 7vw, 4rem);
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
   font-weight: 700;
   line-height: 1.06;
   letter-spacing: -0.03em;
 }
 
 .hero__role {
-  margin-top: 0.7rem;
-  color: var(--muted);
-  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
-  font-weight: 500;
+  margin-top: 0.6rem;
+  color: var(--accent);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  font-weight: 550;
+}
+
+.hero__headline {
+  max-width: 56rem;
+  margin-top: clamp(1.5rem, 4vw, 2.25rem);
+  font-size: clamp(1.6rem, 3.8vw, 2.5rem);
+  font-weight: 650;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
 }
 
 .hero__line {
-  max-width: 38rem;
-  margin-block: 1.3rem 1.7rem;
-  font-size: clamp(1.1rem, 2.2vw, 1.25rem);
-  line-height: 1.5;
+  max-width: 50rem;
+  margin-block: 1.1rem 1.9rem;
+  color: var(--muted);
+  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  line-height: 1.45;
 }
 
 .spec {
-  align-self: end;
-  border-top: 2px solid var(--ink);
-}
-
-.spec div {
-  padding-block: 0.7rem;
-  border-bottom: 1px solid var(--line);
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2rem;
 }
 
 .spec dt {
-  color: var(--muted);
+  color: var(--accent-strong);
 }
 
 .spec dd {
@@ -326,22 +441,55 @@ a:hover {
   line-height: 1.45;
 }
 
-@media (min-width: 860px) {
-  .hero__grid {
-    grid-template-columns: minmax(0, 1fr) 19rem;
-    gap: 3.5rem;
+@media (min-width: 760px) {
+  .spec {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* On phones the buttons come before the paragraph, so they stay on the first screen. */
+@media (max-width: 759px) {
+  .hero__panel {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero .actions {
+    margin-top: 1.25rem;
+  }
+
+  .hero__line {
+    order: 1;
+    margin-block: 1.25rem 0;
+  }
+
+  .spec {
+    order: 2;
   }
 }
 
 /* Sections */
 .section {
-  padding-block: clamp(2.75rem, 6vw, 4.25rem);
-  border-top: 1px solid var(--line);
+  padding-top: var(--gap);
 }
 
 .section__head {
-  max-width: 44rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.6rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--ink);
+}
+
+.section > .container:not(.dark) > .section__head {
+  margin: calc(-1 * var(--panel-pad)) calc(-1 * var(--panel-pad)) 1.6rem;
+  padding: clamp(1.1rem, 3vw, 1.6rem) var(--panel-pad);
+  border-bottom: 0;
+  border-radius: 9px 9px 0 0;
+  background: var(--accent);
+  color: var(--on-accent);
+}
+
+.section > .container:not(.dark) > .section__head :is(.section__kicker, .section__lead) {
+  color: inherit;
 }
 
 .section__head h2 {
@@ -357,6 +505,7 @@ a:hover {
 }
 
 .section__lead {
+  max-width: 46rem;
   margin-top: 0.6rem;
   color: var(--muted);
 }
@@ -383,7 +532,7 @@ a:hover {
   top: 0.68em;
   left: 0;
   width: 0.45rem;
-  height: 1px;
+  height: 2px;
   background: var(--accent);
 }
 
@@ -397,7 +546,8 @@ a:hover {
   padding: 0.14rem 0.5rem;
   border: 1px solid var(--line);
   border-radius: 4px;
-  background: var(--surface);
+  background: #ffffff;
+  color: var(--ink);
   font-family: var(--font-mono);
   font-size: 0.78rem;
   line-height: 1.5;
@@ -406,18 +556,13 @@ a:hover {
 /* Featured project */
 .featured__grid {
   display: grid;
-  gap: 2.25rem;
+  gap: 1rem;
 }
 
-.featured__media {
-  display: grid;
-  gap: 1.75rem;
-  align-content: start;
-}
-
+.featured__media,
 .featured__body {
   display: grid;
-  gap: 1.75rem;
+  gap: 1rem;
   align-content: start;
 }
 
@@ -439,12 +584,12 @@ a:hover {
   gap: 0.2rem 1.1rem;
   align-items: center;
   padding: 1.1rem 1.25rem;
-  border-left: 3px solid var(--accent);
-  background: var(--accent-soft);
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .headline strong {
-  color: var(--accent-strong);
   font-size: 2.3rem;
   font-weight: 700;
   line-height: 1.1;
@@ -456,13 +601,6 @@ a:hover {
   .headline {
     grid-template-columns: auto 1fr;
   }
-}
-
-.loop {
-  padding: 1.1rem 1.25rem;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--surface);
 }
 
 .loop svg {
@@ -493,7 +631,7 @@ a:hover {
 .results th,
 .results td {
   padding: 0.5rem 0.6rem 0.5rem 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--line-soft);
   text-align: left;
   vertical-align: baseline;
 }
@@ -517,6 +655,10 @@ a:hover {
   font-size: 0.76rem;
 }
 
+.results tbody tr:hover {
+  background: var(--accent-soft);
+}
+
 .results .total th,
 .results .total td {
   border-bottom: 2px solid var(--ink);
@@ -531,14 +673,14 @@ a:hover {
 @media (min-width: 900px) {
   .featured__grid {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
-    gap: 3rem;
+    gap: 1.25rem;
   }
 }
 
 /* Timeline */
 .timeline {
   display: grid;
-  gap: 2.25rem;
+  gap: 1rem;
 }
 
 .timeline__item {
@@ -573,11 +715,66 @@ a:hover {
 
   .timeline__body {
     padding-left: 2rem;
-    border-left: 1px solid var(--line);
+    border-left: 2px solid var(--line-soft);
   }
 }
 
 /* Project cards */
+.projects-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+}
+
+.project__media {
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: #0f1c20;
+}
+
+.project__media img {
+  width: 100%;
+  height: auto;
+}
+
+.project__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: clamp(0.8rem, 2.5vw, 1.1rem) clamp(0.8rem, 2.5vw, 1.25rem);
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.project__part {
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--accent);
+  font-size: 0.95rem;
+}
+
+.projects-others {
+  margin-block: 2rem 0.8rem;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 .cards {
   display: grid;
   gap: 1rem;
@@ -587,13 +784,9 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  padding: 1.25rem;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: var(--surface);
 }
 
-.card h3 {
+.card h4 {
   font-size: 1.1rem;
   line-height: 1.3;
 }
@@ -611,25 +804,9 @@ a:hover {
   padding-top: 0.4rem;
 }
 
-.card__foot a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  min-height: 1.75rem;
-  font-size: 0.95rem;
-  font-weight: 550;
-}
-
-.private-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
 .badge {
   padding: 0.05rem 0.45rem;
+  border: 1px solid var(--accent);
   border-radius: 4px;
   background: var(--accent-soft);
   color: var(--accent-strong);
@@ -646,12 +823,7 @@ a:hover {
 /* Skills */
 .skills {
   display: grid;
-  gap: 1rem 2.5rem;
-}
-
-.skill-group {
-  padding-block: 0.9rem;
-  border-top: 1px solid var(--line);
+  gap: 1rem;
 }
 
 .skill-group h3 {
@@ -674,8 +846,8 @@ a:hover {
 
 .chip--work {
   border-color: var(--accent);
-  background: var(--accent-soft);
-  color: var(--accent-strong);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .chip--learning {
@@ -693,7 +865,7 @@ a:hover {
 /* Education */
 .compact {
   display: grid;
-  gap: 1.75rem;
+  gap: 1rem;
 }
 
 .compact p + p {
@@ -703,7 +875,6 @@ a:hover {
 @media (min-width: 760px) {
   .compact {
     grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-    gap: 3rem;
   }
 }
 
@@ -715,64 +886,27 @@ a:hover {
 }
 
 /* Contact */
-.contact {
-  background: var(--ink);
-  color: #f3f4f2;
-}
-
-.contact .section__head h2 {
-  color: #fff;
-}
-
-.contact .section__lead {
-  color: #d3d6d3;
-}
-
-.contact .btn {
-  border-color: #5c636a;
-  background: transparent;
-  color: #fff;
-}
-
-.contact .btn:hover {
-  border-color: #fff;
-}
-
-.contact .btn--primary {
-  border-color: #fff;
-  background: #fff;
-  color: var(--ink);
-}
-
-.contact .btn--primary:hover {
-  background: var(--accent-soft);
-}
-
-.contact :focus-visible {
-  outline-color: #fff;
-}
-
 .contact__note {
   margin-top: 1.5rem;
-  color: #d3d6d3;
+  color: var(--muted);
   font-size: 0.93rem;
 }
 
 /* Footer */
 .site-footer {
+  margin-top: var(--gap);
   padding-block: 1.5rem;
-  background: var(--ink);
-  border-top: 1px solid #383e44;
-  color: #d3d6d3;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
   font-size: 0.88rem;
 }
 
 .site-footer a {
-  color: #fff;
+  color: var(--ink);
 }
 
 .not-found {
-  padding-block: 6rem;
+  margin-block: 3rem;
 }
 
 .not-found h1 {
@@ -782,4 +916,71 @@ a:hover {
 .not-found p {
   margin-block: 0.6rem 1.4rem;
   color: var(--muted);
+}
+
+/* Hover */
+.box:hover,
+.card:hover,
+.card:focus-within,
+.project:hover,
+.project:focus-within,
+.skill-group:hover,
+.timeline__item:hover,
+.loop:hover {
+  border-color: var(--accent);
+  box-shadow:
+    0 0 0 1px var(--accent),
+    0 10px 22px rgb(14 20 23 / 20%);
+}
+
+.chip:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.chip--work:hover {
+  background: var(--accent-strong);
+  color: var(--on-accent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn,
+  .box,
+  .card,
+  .chip,
+  .lang-switch,
+  .loop,
+  .project,
+  .project__media img,
+  .site-nav a,
+  .skill-group,
+  .timeline__item {
+    transition:
+      background-color 0.18s ease,
+      border-color 0.18s ease,
+      box-shadow 0.18s ease,
+      color 0.18s ease,
+      transform 0.18s ease;
+  }
+
+  @media (hover: hover) {
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgb(14 20 23 / 25%);
+    }
+
+    .box:hover,
+    .card:hover,
+    .project:hover,
+    .skill-group:hover,
+    .timeline__item:hover,
+    .loop:hover {
+      transform: translateY(-3px);
+    }
+
+    .project:hover .project__media img {
+      transform: scale(1.05);
+    }
+  }
 }

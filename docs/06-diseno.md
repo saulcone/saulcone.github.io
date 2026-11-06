@@ -5,9 +5,9 @@ Profesional, limpio y técnico, con personalidad pero sin distraer. Debe parecer
 
 ## Estructura (una sola página + detalle de proyecto)
 1. **Hero:** nombre, rol, frase, estado de disponibilidad y tres botones.
-2. **Proyecto destacado** (TFG): tarjeta grande con vídeo o imagen y enlace a su página de detalle.
+2. **Proyectos destacados:** tres tarjetas con foto, chips de stack y enlaces (TPV Virtual, TFG e inventario), y debajo «Otros proyectos».
 3. **Experiencia:** línea temporal sencilla (NAX, Beply).
-4. **Proyectos:** cuadrícula de tarjetas (título, una línea, chips de stack, enlaces o etiqueta "Código privado").
+4. **TFG en detalle:** vídeo, bucle See → Point → Fly, resultados y limitaciones.
 5. **Habilidades:** agrupadas por categoría con la distinción "trabajo real" / "proyectos" / "aprendiendo".
 6. **Formación e idiomas:** bloque compacto.
 7. **Contacto:** email, LinkedIn, GitHub y botón de CV.
@@ -16,7 +16,8 @@ Navegación fija arriba con anclas a cada sección y selector ES/EN.
 
 ## Estilo visual
 - Tipografía: una sans moderna para texto (p. ej., Inter o similar) y una monoespaciada para detalles técnicos (chips, fechas).
-- Color: fondo neutro, un único color de acento. Sugerencia: azul o verde azulado (encaja con IA/tecnología). Modo claro y oscuro siguiendo la preferencia del sistema.
+- Color: fondo neutro y un color propio por sección (azul, verde azulado, violeta, naranja, granate y pizarra), siempre con contraste AA. Modo claro y oscuro siguiendo la preferencia del sistema.
+- Contraste alto: cada sección va en su propio panel con borde sobre un fondo más oscuro, y sus bloques en recuadros. Hero y contacto son paneles oscuros. Los componentes tienen estado hover y respetan `prefers-reduced-motion`.
 - Espaciado generoso, máximo ~1100 px de ancho de contenido.
 - Iconos sencillos y coherentes (una sola librería).
 - Animaciones mínimas: aparición suave al hacer scroll, respetando `prefers-reduced-motion`.

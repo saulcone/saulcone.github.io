@@ -4,13 +4,13 @@ import { getText, homePath, profile } from "../lib/content.js";
 const { lang } = Astro.props;
 const text = getText(lang);
 const otherLang = lang === "es" ? "en" : "es";
-const links = ["featured", "experience", "projects", "skills", "education", "about", "contact"];
+const links = ["projects", "experience", "featured", "skills", "education", "about", "contact"];
 ---
 
 <a class="skip-link" href="#main">
   {text.a11y.skip}
 </a>
-<header class="site-header">
+<header class="site-header dark">
   <div class="container site-header__inner">
     <a class="site-header__brand" href={homePath(lang)}>
       {profile.name}

@@ -10,7 +10,7 @@ const project = profile.projects.find((item) => item.featured);
 const { rows, total } = project.results;
 ---
 
-<section class="section featured" id="featured" aria-labelledby="featured-title">
+<section class="section section--tfg featured" id="featured" aria-labelledby="featured-title">
   <div class="container">
     <div class="section__head">
       <p class="section__kicker mono">
@@ -44,7 +44,7 @@ const { rows, total } = project.results;
           <figcaption>{text.videoCaption}</figcaption>
         </figure>
         <LoopDiagram lang={lang} />
-        <div>
+        <div class="box">
           <h3 class="subhead">{text.limits}</h3>
           <ul class="bullets">
             {project.limitations[lang].map((item) => (
@@ -60,12 +60,12 @@ const { rows, total } = project.results;
           <span>{text.headline}</span>
         </p>
 
-        <div>
+        <div class="box">
           <h3 class="subhead">{text.problem}</h3>
           <p>{localized(project.problem, lang)}</p>
         </div>
 
-        <div>
+        <div class="box">
           <h3 class="subhead">{text.built}</h3>
           <ul class="bullets">
             {project.highlights[lang].map((item) => (
@@ -74,7 +74,7 @@ const { rows, total } = project.results;
           </ul>
         </div>
 
-        <div>
+        <div class="box">
           <h3 class="subhead">{text.decisions}</h3>
           <ul class="bullets">
             {project.decisions[lang].map((item) => (
@@ -83,7 +83,7 @@ const { rows, total } = project.results;
           </ul>
         </div>
 
-        <div>
+        <div class="box">
           <h3 class="subhead">{text.results}</h3>
           <table class="results">
             <caption>{text.resultsCaption}</caption>
