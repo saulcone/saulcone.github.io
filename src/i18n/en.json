@@ -32,7 +32,7 @@
     "specEnglish": "English"
   },
   "featured": {
-    "kicker": "In depth",
+    "kicker": "Featured project",
     "lead": "My thesis: a simulated drone that interprets what it sees with a vision-language model and decides how to move indoors.",
     "headline": "of test missions reached the goal (29/45), versus 22.2% for the approach it started from, using the same model.",
     "problem": "Problem",
@@ -48,6 +48,7 @@
     "repo": "View the code",
     "paper": "VLN-Pilot paper",
     "videoCaption": "Unity simulation (37 s, no sound). The drone's camera leaves the bedroom, crosses a door and reaches the kitchen fridge.",
+    "photoCaption": "The drone in the Unity simulation, next to a doorway.",
     "videoFallback": "Your browser can't play this video.",
     "videoCaptionsLabel": "English description",
     "diagramTitle": "See, Point, Fly perception–action loop",
@@ -63,14 +64,15 @@
     "lead": "Two internships working on production systems, not exercises."
   },
   "projects": {
-    "title": "Featured projects",
-    "lead": "The three projects that best show how I work, with the key technologies in each.",
-    "others": "Other projects",
+    "title": "Projects",
+    "lead": "What I've built, with the key technologies in each project.",
+    "carousel": "carousel",
+    "prev": "Previous project",
+    "next": "Next project",
     "repo": "View the code",
     "backend": "Backend",
     "frontend": "Frontend",
     "demo": "Demo",
-    "detail": "See in depth",
     "inProgress": "In progress"
   },
   "skills": {

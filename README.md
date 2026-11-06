@@ -33,9 +33,10 @@ GitHub Actions ejecuta todo esto en cada push y pull request, y despliega desde 
 ## Añadir un proyecto
 
 1. Añade una entrada a `projects` en `data/profile.json`, con los textos en `es` y `en`.
-2. Ejecuta `npm run build` para validarla.
+2. Para la foto, guárdala en `public/img/` a 800×500 px y añade `"image": { "src": "/img/...", "alt": { "es": "...", "en": "..." } }`. Es opcional: sin foto, la tarjeta muestra un icono.
+3. Ejecuta `npm run build` para validarla.
 
-Los proyectos confidenciales llevan `"confidential": true` y no pueden enlazar a un repositorio.
+El proyecto aparece solo en el carrusel, en el orden de `projects`. El que lleva `"featured": true` (el TFG) no va en el carrusel: tiene su propio apartado. Los proyectos de empresa no van aquí: se cuentan en `experience`.
 
 ## Cambiar los CV
 

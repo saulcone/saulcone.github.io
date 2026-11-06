@@ -32,7 +32,7 @@
     "specEnglish": "Inglés"
   },
   "featured": {
-    "kicker": "En detalle",
+    "kicker": "Proyecto destacado",
     "lead": "Mi TFG: un dron simulado que interpreta lo que ve con un modelo de visión y lenguaje y decide cómo moverse por interiores.",
     "headline": "metas alcanzadas en las pruebas (29/45), frente al 22,2 % de la propuesta de partida con el mismo modelo.",
     "problem": "Problema",
@@ -48,6 +48,7 @@
     "repo": "Ver el código",
     "paper": "Artículo de VLN-Pilot",
     "videoCaption": "Simulación en Unity (37 s, sin sonido). La cámara del dron sale del dormitorio, cruza una puerta y llega hasta el frigorífico de la cocina.",
+    "photoCaption": "El dron en la simulación de Unity, junto a una puerta.",
     "videoFallback": "Tu navegador no puede reproducir este vídeo.",
     "videoCaptionsLabel": "Descripción en español",
     "diagramTitle": "Bucle de percepción y acción See, Point, Fly",
@@ -63,14 +64,15 @@
     "lead": "Dos prácticas en las que trabajé en producción, no en ejercicios."
   },
   "projects": {
-    "title": "Proyectos destacados",
-    "lead": "Los tres proyectos que mejor muestran cómo trabajo, con las tecnologías clave de cada uno.",
-    "others": "Otros proyectos",
+    "title": "Proyectos",
+    "lead": "Lo que he construido, con las tecnologías clave de cada proyecto.",
+    "carousel": "carrusel",
+    "prev": "Proyecto anterior",
+    "next": "Proyecto siguiente",
     "repo": "Ver el código",
     "backend": "Backend",
     "frontend": "Frontend",
     "demo": "Demo",
-    "detail": "Ver en detalle",
     "inProgress": "En desarrollo"
   },
   "skills": {

@@ -110,7 +110,6 @@
     {
       "id": "tpv",
       "featured": false,
-      "pinned": true,
       "title": {
         "es": "TPV Virtual",
         "en": "TPV Virtual"
@@ -278,7 +277,6 @@
         "es": "Parte de VLN-Pilot (Domínguez-Dager et al., 2026). El código base es de Bessie Domínguez y Sergio Suescun.",
         "en": "Builds on VLN-Pilot (Domínguez-Dager et al., 2026). The base code is by Bessie Domínguez and Sergio Suescun."
       },
-      "pinned": true,
       "image": {
         "src": "/img/proyecto-tfg.webp",
         "alt": {
@@ -314,7 +312,6 @@
       "links": {
         "repo": "https://github.com/saulcone/event-driven-inventory-api"
       },
-      "pinned": true,
       "image": {
         "src": "/img/proyecto-inventario.webp",
         "alt": {

@@ -10,7 +10,7 @@ const project = profile.projects.find((item) => item.featured);
 const { rows, total } = project.results;
 ---
 
-<section class="section section--tfg featured" id="featured" aria-labelledby="featured-title">
+<section class="section featured" id="featured" aria-labelledby="featured-title">
   <div class="container">
     <div class="section__head">
       <p class="section__kicker mono">
@@ -42,6 +42,17 @@ const { rows, total } = project.results;
             {text.videoFallback}
           </video>
           <figcaption>{text.videoCaption}</figcaption>
+        </figure>
+        <figure>
+          <img
+            src={project.image.src}
+            alt={localized(project.image.alt, lang)}
+            width="800"
+            height="500"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>{text.photoCaption}</figcaption>
         </figure>
         <LoopDiagram lang={lang} />
         <div class="box">

@@ -31,9 +31,9 @@ Usar la biografía larga de `01-perfil.md`.
 **EN:** Experience — Two internships working on production systems, not exercises.
 
 ## Proyectos (encabezado)
-**ES:** Proyectos destacados — Los tres proyectos que mejor muestran cómo trabajo, con las tecnologías clave de cada uno.
-**EN:** Featured projects — The three projects that best show how I work, with the key technologies in each.
-Debajo van «Otros proyectos» / «Other projects». Los proyectos de empresa no aparecen aquí: se cuentan en Experiencia.
+**ES:** Proyectos — Lo que he construido, con las tecnologías clave de cada proyecto.
+**EN:** Projects — What I've built, with the key technologies in each project.
+Los proyectos de empresa no aparecen aquí: se cuentan en Experiencia.
 
 ## Habilidades (encabezado)
 **ES:** Habilidades — Separadas entre lo que he usado en trabajo real y lo que he usado en proyectos.
