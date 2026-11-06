@@ -30,6 +30,12 @@ jobs:
         run: npm run check:links -- --external
       - name: Lighthouse
         run: npx lhci autorun
+      # Job logs need a login; annotations are public, so failures stay readable.
+      - name: Report Lighthouse failures
+        if: failure()
+        run: >-
+          jq -r '.[] | "::error::\(.url) \(.auditId).\(.auditProperty): \(.actual) (min \(.expected))"'
+          .lighthouseci/assertion-results.json || true
       - name: Deploy gate
         if: github.ref == 'refs/heads/main'
         run: npm run check:markers
