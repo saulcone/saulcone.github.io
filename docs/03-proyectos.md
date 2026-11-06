@@ -1,6 +1,6 @@
 # 03 · Proyectos (casos de estudio)
 
-Orden de aparición en la web: 1 → 6. El proyecto 1 va destacado y con página de detalle propia.
+Orden de aparición en la web: TPV Virtual, TFG e inventario como destacados (los fijados en GitHub); debajo, Habit Tracker y este portfolio. El TFG tiene además su sección en detalle. Los proyectos de empresa (Beply, NAX Solutions) no van aquí: se cuentan en Experiencia.
 
 Estructura recomendada para cada caso de estudio:
 1. **Problema** (1-2 frases).
@@ -8,7 +8,7 @@ Estructura recomendada para cada caso de estudio:
 3. **Decisiones técnicas** (por qué esas herramientas).
 4. **Resultado** (solo hechos verificables, sin métricas inventadas).
 5. **Stack** (chips).
-6. **Enlaces** (repo, vídeo, memoria) o "Código privado" si es confidencial.
+6. **Enlaces** (repo, vídeo, memoria).
 
 ---
 
@@ -57,31 +57,21 @@ Sin metas falsas en la propuesta propia.
 
 ---
 
-## 2. Arquitectura multiagente para un asistente conversacional (Beply)
-Confidencial: solo descripción a alto nivel.
+## 2. TPV Virtual
+Java 21 · Spring Boot · Spring Security · JWT · MySQL · Redis · Vue 3 · Docker.
+Proyecto académico en equipo: simulador de pasarela de pago con checkout alojado, transacciones y devoluciones, y paneles para comercios, soporte y administración. No mueve dinero real.
+Parte de Saúl (según sus commits): registro y login con contraseñas hasheadas, gestión de claves de API y validación en el backend; autenticación con Pinia y vistas de soporte en el frontend. No presentarlo como proyecto individual.
+Repos: https://github.com/fabgs/tpv-backend y https://github.com/fabgs/tpv-frontend · Demo: https://tpv-frontend.vercel.app/
 
-- Problema: un único asistente no escala bien cuando las peticiones de clientes son de tipos muy distintos.
-- Solución: enrutador que deriva cada petición a un agente especializado, con componentes desacoplados y tolerancia a fallos (Google ADK: LlmAgent, BaseTool).
-- Calidad: tests con Pytest de consistencia de respuestas e integridad de datos antes de desplegar.
-- Visual permitido: diagrama genérico "petición → enrutador → agentes especializados → respuesta", sin nombres internos.
-
-## 3. API REST para una plataforma de datos satelitales (NAX Solutions)
-Confidencial: solo descripción a alto nivel.
-
-- Endpoints REST con Django Ninja.
-- Refactorización de filtros complejos a recursos REST planos.
-- Migración de datos analíticos de ClickHouse a PostgreSQL.
-- Tests de integración en GitLab CI/CD.
-
-## 4. Habit Tracker (en desarrollo)
+## 3. Habit Tracker (en desarrollo)
 Java 21 · Spring Boot 4.1 · PostgreSQL 16 · Flyway · JUnit 5 · Mockito · Docker Compose.
 Proyecto personal de aprendizaje: backend para definir hábitos y registrar el progreso día a día, calculando cada día según la zona horaria del usuario.
 Entidades: User, Habit, HabitLog. Repo: https://github.com/saulcone/habit-tracker
 
-## 5. Sistema de gestión de inventario
+## 4. Sistema de gestión de inventario
 Python · Django · Django Ninja · React · TypeScript · PostgreSQL · Docker.
 Aplicación full-stack de productos e inventario con panel de métricas, autenticación JWT y control de acceso por roles (admin, staff, viewer). Repo: https://github.com/saulcone/event-driven-inventory-api
-**Confidencialidad:** nació como prueba técnica para una empresa. No nombrar a la empresa en la web ni en el repo.
+**Confidencialidad:** nació como prueba técnica para una empresa. No nombrar a la empresa en la web ni en el repo. La foto de la web va recortada sin la barra lateral. Aunque el repo se llama `event-driven`, no usa eventos: no describirlo así.
 
-## 6. Este portfolio
+## 5. Este portfolio
 Web estática, bilingüe, accesible, con CI/CD en GitHub Actions (build + tests + Lighthouse). Sirve como demostración de buenas prácticas.

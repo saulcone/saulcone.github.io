@@ -21,7 +21,8 @@
     "contact": "Contacto"
   },
   "hero": {
-    "line": "Construyo APIs fiables y sistemas de IA que pongo a prueba: de agentes con LLMs a un dron simulado que navega guiado por lo que ve.",
+    "headline": "¡Hola! Soy Saúl, desarrollador de software especializado en backend con Python (Django), y ahora ampliando a Java (Spring Boot).",
+    "line": "Tengo experiencia con workflows de LLM y APIs fiables, y me gusta tanto explicar bien las cosas como cuidar el diseño. He hecho prácticas en NAX Solutions y Beply, y mi TFG es un dron simulado que navega guiado por lo que ve. Si crees que puedo encajar en tu equipo, me encantará hablar contigo.",
     "status": "Disponible ya · Remoto o Alicante, Valencia, Murcia y Europa",
     "cv": "Descargar CV",
     "contact": "Contactar",
@@ -31,7 +32,7 @@
     "specEnglish": "Inglés"
   },
   "featured": {
-    "kicker": "Proyecto destacado",
+    "kicker": "En detalle",
     "lead": "Mi TFG: un dron simulado que interpreta lo que ve con un modelo de visión y lenguaje y decide cómo moverse por interiores.",
     "headline": "metas alcanzadas en las pruebas (29/45), frente al 22,2 % de la propuesta de partida con el mismo modelo.",
     "problem": "Problema",
@@ -62,10 +63,14 @@
     "lead": "Dos prácticas en las que trabajé en producción, no en ejercicios."
   },
   "projects": {
-    "title": "Proyectos",
-    "lead": "Lo que he construido y cómo lo he pensado.",
-    "private": "Código privado (proyecto de empresa)",
+    "title": "Proyectos destacados",
+    "lead": "Los tres proyectos que mejor muestran cómo trabajo, con las tecnologías clave de cada uno.",
+    "others": "Otros proyectos",
     "repo": "Ver el código",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "demo": "Demo",
+    "detail": "Ver en detalle",
     "inProgress": "En desarrollo"
   },
   "skills": {

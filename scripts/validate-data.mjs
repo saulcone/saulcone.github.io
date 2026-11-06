@@ -1,5 +1,5 @@
 // Fails the build if data/profile.json is malformed or breaks the brief's rules.
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { z } from "astro/zod";
 
 const raw = readFileSync(new URL("../data/profile.json", import.meta.url), "utf8");
@@ -42,6 +42,9 @@ const schema = z.object({
     z.object({
       id: z.string(),
       featured: z.boolean(),
+      pinned: z.boolean().optional(),
+      image: z.object({ src: z.string().startsWith("/"), alt: bilingual }).optional(),
+      contribution: bilingual.optional(),
       title: bilingual,
       type: bilingual,
       stack: z.array(label).min(1),
@@ -74,8 +77,11 @@ if (profile.projects.filter((project) => project.featured).length !== 1) {
 }
 
 for (const project of profile.projects) {
-  if (project.confidential && project.links.repo) {
-    errors.push(`projects.${project.id}: confidential projects can't link to a repo`);
+  if (project.pinned && !project.image) {
+    errors.push(`projects.${project.id}: pinned projects need an image`);
+  }
+  if (project.image && !existsSync(new URL(`../public${project.image.src}`, import.meta.url))) {
+    errors.push(`projects.${project.id}: missing image ${project.image.src}`);
   }
 }
 

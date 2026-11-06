@@ -25,10 +25,10 @@ const markerId = `loop-arrow-${lang}`;
         markerHeight="7"
         orient="auto-start-reverse"
       >
-        <path d="M0 0 10 5 0 10z" fill="#0b6b66"></path>
+        <path d="M0 0 10 5 0 10z" style="fill: var(--accent)"></path>
       </marker>
     </defs>
-    <g fill="none" stroke="#0b6b66" stroke-width="2">
+    <g fill="none" stroke-width="2" style="stroke: var(--accent)">
       <line x1="158" y1="55" x2="228" y2="55" marker-end={`url(#${markerId})`}></line>
       <line x1="368" y1="55" x2="438" y2="55" marker-end={`url(#${markerId})`}></line>
       <path d="M510 92 V140 H90 V96" marker-end={`url(#${markerId})`}></path>
@@ -41,15 +41,14 @@ const markerId = `loop-arrow-${lang}`;
           width="132"
           height="70"
           rx="6"
-          fill="#e2f0ee"
-          stroke="#0b6b66"
+          style="fill: var(--accent-soft); stroke: var(--accent)"
           stroke-width="2"
         />
         <text
           x={node.x}
           y="64"
           text-anchor="middle"
-          fill="#084f4b"
+          style="fill: var(--accent-strong)"
           font-size="28"
           font-weight="650"
           font-family="Inter Variable, system-ui, sans-serif"

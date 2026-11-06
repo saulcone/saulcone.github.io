@@ -9,34 +9,33 @@ const english = profile.languages[1];
 ---
 
 <section class="hero">
-  <div class="container hero__grid">
-    <div>
-      <p class="hero__status mono">{text.hero.status}</p>
-      <h1>{profile.name}</h1>
-      <p class="hero__role">{localized(profile.role, lang)}</p>
-      <p class="hero__line">{text.hero.line}</p>
-      <div class="actions">
-        <CvLink lang={lang} primary />
-        <a class="btn" href="#contact">
-          <Icon name="mail" />
-          {text.hero.contact}
-        </a>
-        <a class="btn" href={profile.contact.github}>
-          <Icon name="github" />
-          {text.hero.github}
-        </a>
-      </div>
+  <div class="container hero__panel dark">
+    <p class="hero__status mono">{text.hero.status}</p>
+    <h1>{profile.name}</h1>
+    <p class="hero__role">{localized(profile.role, lang)}</p>
+    <p class="hero__headline">{text.hero.headline}</p>
+    <p class="hero__line">{text.hero.line}</p>
+    <div class="actions">
+      <CvLink lang={lang} primary />
+      <a class="btn" href="#contact">
+        <Icon name="mail" />
+        {text.hero.contact}
+      </a>
+      <a class="btn" href={profile.contact.github}>
+        <Icon name="github" />
+        {text.hero.github}
+      </a>
     </div>
     <dl class="spec">
-      <div>
+      <div class="box">
         <dt class="mono">{text.hero.specBase}</dt>
         <dd>{localized(profile.location, lang)}</dd>
       </div>
-      <div>
+      <div class="box">
         <dt class="mono">{text.hero.specAvailability}</dt>
         <dd>{localized(profile.availability, lang)}</dd>
       </div>
-      <div>
+      <div class="box">
         <dt class="mono">{text.hero.specEnglish}</dt>
         <dd>{localized(english.level, lang)}</dd>
       </div>

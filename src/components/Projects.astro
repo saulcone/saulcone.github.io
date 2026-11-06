@@ -5,20 +5,78 @@ import { getText, localized, profile } from "../lib/content.js";
 const { lang } = Astro.props;
 const text = getText(lang).projects;
 const newTab = getText(lang).a11y.newTab;
-const projects = profile.projects.filter((project) => !project.featured);
+const pinned = profile.projects.filter((project) => project.pinned);
+const others = profile.projects.filter((project) => !project.pinned);
+
+const linksOf = ({ links }) =>
+  [
+    { href: links.repo, label: links.frontend ? text.backend : text.repo, icon: "github" },
+    { href: links.frontend, label: text.frontend, icon: "github" },
+    { href: links.demo, label: text.demo, icon: "external" },
+  ].filter((link) => link.href);
 ---
 
-<section class="section" id="projects" aria-labelledby="projects-title">
+<section class="section section--projects" id="projects" aria-labelledby="projects-title">
   <div class="container">
     <div class="section__head">
       <h2 id="projects-title">{text.title}</h2>
       <p class="section__lead">{text.lead}</p>
     </div>
+    <ul class="projects-grid">
+      {pinned.map((project) => (
+        <li class="project">
+          <div class="project__media">
+            <img
+              src={project.image.src}
+              alt={localized(project.image.alt, lang)}
+              width="800"
+              height="500"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="project__body">
+            <div>
+              <h3>{localized(project.title, lang)}</h3>
+              <p class="card__type mono">{localized(project.type, lang)}</p>
+            </div>
+            <p>{localized(project.summary, lang)}</p>
+            {project.contribution && (
+              <p class="project__part">{localized(project.contribution, lang)}</p>
+            )}
+            <ul class="chips" aria-label="Stack">
+              {project.stack.map((item) => (
+                <li class="chip">{localized(item, lang)}</li>
+              ))}
+            </ul>
+            <div class="card__foot">
+              {project.featured && (
+                <a class="btn btn--small btn--primary" href="#featured">
+                  <Icon name="arrowDown" />
+                  {text.detail}
+                </a>
+              )}
+              {linksOf(project).map((link) => (
+                <a class="btn btn--small" href={link.href} target="_blank" rel="noopener">
+                  <Icon name={link.icon} />
+                  {link.label}
+                  <span class="visually-hidden">
+                    {localized(project.title, lang)} {newTab}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <h3 class="subhead projects-others">{text.others}</h3>
     <ul class="cards">
-      {projects.map((project) => (
+      {others.map((project) => (
         <li class="card">
           <div>
-            <h3>{localized(project.title, lang)}</h3>
+            <h4>{localized(project.title, lang)}</h4>
             <p class="card__type mono">{localized(project.type, lang)}</p>
           </div>
           <p>{localized(project.summary, lang)}</p>
@@ -29,21 +87,15 @@ const projects = profile.projects.filter((project) => !project.featured);
           </ul>
           <div class="card__foot">
             {project.status === "in_progress" && <span class="badge">{text.inProgress}</span>}
-            {project.links.repo && (
-              <a href={project.links.repo} target="_blank" rel="noopener">
-                <Icon name="github" />
-                {text.repo}
+            {linksOf(project).map((link) => (
+              <a class="btn btn--small" href={link.href} target="_blank" rel="noopener">
+                <Icon name={link.icon} />
+                {link.label}
                 <span class="visually-hidden">
                   {localized(project.title, lang)} {newTab}
                 </span>
               </a>
-            )}
-            {project.confidential && (
-              <span class="private-label">
-                <Icon name="lock" />
-                {text.private}
-              </span>
-            )}
+            ))}
           </div>
         </li>
       ))}

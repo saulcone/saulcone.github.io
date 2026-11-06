@@ -8,3 +8,6 @@ dist/
 # Material privado: nunca al repo (teléfono, fecha de nacimiento, memoria completa)
 archives/
 videos_tfg/
+
+# Originales de las fotos: la web usa los recortes de public/img
+media/

@@ -5,13 +5,13 @@ const { lang } = Astro.props;
 const text = getText(lang).education;
 ---
 
-<section class="section" id="education" aria-labelledby="education-title">
+<section class="section section--education" id="education" aria-labelledby="education-title">
   <div class="container">
     <div class="section__head">
       <h2 id="education-title">{text.title}</h2>
     </div>
     <div class="compact">
-      <div>
+      <div class="box">
         <h3 class="subhead">{text.degree}</h3>
         {profile.education.map((item) => (
           <>
@@ -22,7 +22,7 @@ const text = getText(lang).education;
           </>
         ))}
       </div>
-      <div>
+      <div class="box">
         <h3 class="subhead">{text.languages}</h3>
         <ul>
           {profile.languages.map((language) => (

@@ -108,6 +108,49 @@
   ],
   "projects": [
     {
+      "id": "tpv",
+      "featured": false,
+      "pinned": true,
+      "title": {
+        "es": "TPV Virtual",
+        "en": "TPV Virtual"
+      },
+      "type": {
+        "es": "Proyecto académico en equipo · Simulador de pagos",
+        "en": "Academic team project · Payment simulator"
+      },
+      "stack": [
+        "Java 21",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "MySQL",
+        "Redis",
+        "Vue 3",
+        "Docker"
+      ],
+      "summary": {
+        "es": "Pasarela de pago virtual con checkout alojado, gestión de transacciones y devoluciones, y paneles para comercios, soporte y administración. Es un simulador académico: no mueve dinero real.",
+        "en": "Virtual payment gateway with a hosted checkout, transaction and refund management, and workspaces for merchants, support and admins. It's an academic simulator: no real money is involved."
+      },
+      "contribution": {
+        "es": "Mi parte: registro y login con contraseñas hasheadas, gestión de claves de API y validación en el backend; autenticación con Pinia y vistas de soporte en el frontend.",
+        "en": "My part: registration and login with hashed passwords, API key management and validation on the backend; Pinia authentication and support views on the frontend."
+      },
+      "image": {
+        "src": "/img/proyecto-tpv.webp",
+        "alt": {
+          "es": "Página de inicio de TPV Virtual, con el titular «Acepta pagos online de forma segura».",
+          "en": "TPV Virtual landing page, headlined “Acepta pagos online de forma segura” (accept online payments securely)."
+        }
+      },
+      "links": {
+        "repo": "https://github.com/fabgs/tpv-backend",
+        "frontend": "https://github.com/fabgs/tpv-frontend",
+        "demo": "https://tpv-frontend.vercel.app/"
+      }
+    },
+    {
       "id": "tfg-drone-vlm",
       "featured": true,
       "title": {
@@ -234,58 +277,51 @@
       "credit": {
         "es": "Parte de VLN-Pilot (Domínguez-Dager et al., 2026). El código base es de Bessie Domínguez y Sergio Suescun.",
         "en": "Builds on VLN-Pilot (Domínguez-Dager et al., 2026). The base code is by Bessie Domínguez and Sergio Suescun."
+      },
+      "pinned": true,
+      "image": {
+        "src": "/img/proyecto-tfg.webp",
+        "alt": {
+          "es": "Dron simulado en Unity cruzando una puerta hacia un dormitorio.",
+          "en": "Simulated drone in Unity crossing a doorway into a bedroom."
+        }
       }
     },
     {
-      "id": "multiagent-assistant",
+      "id": "inventory-system",
       "featured": false,
       "title": {
-        "es": "Arquitectura multiagente para un asistente conversacional",
-        "en": "Multi-agent architecture for a conversational assistant"
+        "es": "Sistema de gestión de inventario",
+        "en": "Inventory management system"
       },
       "type": {
-        "es": "Prácticas en Beply (descrito a alto nivel)",
-        "en": "Internship at Beply (high-level description)"
+        "es": "Proyecto full-stack",
+        "en": "Full-stack project"
       },
-      "period": "2025-06 / 2025-12",
-      "stack": [
-        "Python",
-        "Google ADK",
-        "LLMs",
-        "Pytest"
-      ],
-      "summary": {
-        "es": "Diseño del sistema de agentes que enruta las peticiones de clientes hacia agentes especializados, desacoplado y tolerante a fallos, con validación automatizada antes de cada despliegue.",
-        "en": "Design of the agent system routing client requests to specialized agents, decoupled and fault-tolerant, with automated validation before each deployment."
-      },
-      "confidential": true,
-      "links": {}
-    },
-    {
-      "id": "nax-api",
-      "featured": false,
-      "title": {
-        "es": "API REST para una plataforma de datos satelitales",
-        "en": "REST API for a satellite-data platform"
-      },
-      "type": {
-        "es": "Prácticas en NAX Solutions (descrito a alto nivel)",
-        "en": "Internship at NAX Solutions (high-level description)"
-      },
-      "period": "2026-06 / 2026-08",
       "stack": [
         "Python",
         "Django Ninja",
+        "React",
+        "TypeScript",
         "PostgreSQL",
-        "ClickHouse",
-        "GitLab CI/CD"
+        "JWT",
+        "Docker"
       ],
       "summary": {
-        "es": "Endpoints REST, refactorización hacia recursos planos para mejorar rendimiento y coherencia, y migración de datos analíticos de ClickHouse a PostgreSQL.",
-        "en": "REST endpoints, refactor towards flat resources for performance and consistency, and analytical data migration from ClickHouse to PostgreSQL."
+        "es": "Aplicación de productos e inventario con panel de métricas, autenticación JWT y control de acceso por roles.",
+        "en": "Product and inventory application with a metrics dashboard, JWT authentication and role-based access control."
       },
-      "confidential": true,
-      "links": {}
+      "links": {
+        "repo": "https://github.com/saulcone/event-driven-inventory-api"
+      },
+      "pinned": true,
+      "image": {
+        "src": "/img/proyecto-inventario.webp",
+        "alt": {
+          "es": "Tabla de productos de la aplicación, con precio, stock y unidades vendidas.",
+          "en": "The app's product table, showing price, stock and units sold."
+        }
+      }
     },
     {
       "id": "habit-tracker",
@@ -314,33 +350,6 @@
       },
       "links": {
         "repo": "https://github.com/saulcone/habit-tracker"
-      }
-    },
-    {
-      "id": "inventory-system",
-      "featured": false,
-      "title": {
-        "es": "Sistema de gestión de inventario",
-        "en": "Inventory management system"
-      },
-      "type": {
-        "es": "Proyecto full-stack",
-        "en": "Full-stack project"
-      },
-      "stack": [
-        "Python",
-        "Django Ninja",
-        "React",
-        "TypeScript",
-        "PostgreSQL",
-        "Docker"
-      ],
-      "summary": {
-        "es": "Aplicación de productos e inventario con panel de métricas, autenticación JWT y control de acceso por roles.",
-        "en": "Product and inventory application with a metrics dashboard, JWT authentication and role-based access control."
-      },
-      "links": {
-        "repo": "https://github.com/saulcone/event-driven-inventory-api"
       }
     },
     {
@@ -400,11 +409,11 @@
           }
         ],
         "projects": [
+          "Spring Boot",
           "FastAPI",
           "Flask"
         ],
         "learning": [
-          "Spring Boot",
           "Jakarta"
         ]
       },
@@ -415,7 +424,8 @@
         },
         "work": [],
         "projects": [
-          "React"
+          "React",
+          "Vue"
         ],
         "learning": []
       },

@@ -21,7 +21,8 @@
     "contact": "Contact"
   },
   "hero": {
-    "line": "I build reliable APIs and AI systems I put to the test, from LLM agents to a simulated drone that navigates by what it sees.",
+    "headline": "Hi! I'm Saúl, a software developer specialized in backend with Python (Django), now expanding into Java (Spring Boot).",
+    "line": "I have experience with LLM workflows and reliable APIs, and I care about both explaining things well and good design. I've done internships at NAX Solutions and Beply, and my thesis is a simulated drone that navigates by what it sees. If you think I could fit in your team, I'd love to talk.",
     "status": "Available now · Remote or Alicante, Valencia, Murcia and Europe",
     "cv": "Download CV",
     "contact": "Get in touch",
@@ -31,7 +32,7 @@
     "specEnglish": "English"
   },
   "featured": {
-    "kicker": "Featured project",
+    "kicker": "In depth",
     "lead": "My thesis: a simulated drone that interprets what it sees with a vision-language model and decides how to move indoors.",
     "headline": "of test missions reached the goal (29/45), versus 22.2% for the approach it started from, using the same model.",
     "problem": "Problem",
@@ -62,10 +63,14 @@
     "lead": "Two internships working on production systems, not exercises."
   },
   "projects": {
-    "title": "Projects",
-    "lead": "What I've built and how I thought about it.",
-    "private": "Private code (company project)",
+    "title": "Featured projects",
+    "lead": "The three projects that best show how I work, with the key technologies in each.",
+    "others": "Other projects",
     "repo": "View the code",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "demo": "Demo",
+    "detail": "See in depth",
     "inProgress": "In progress"
   },
   "skills": {

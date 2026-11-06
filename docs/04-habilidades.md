@@ -5,8 +5,8 @@ Mostrar agrupado por categoría. Diferenciar visualmente (por ejemplo, con una l
 | Categoría | Usado en trabajo real | Proyectos / formación | Aprendiendo ahora |
 |---|---|---|---|
 | Lenguajes | Python, SQL | Java, C++, TypeScript | — |
-| Backend | Django, Django Ninja, APIs REST | FastAPI, Flask | Spring Boot, Jakarta |
-| Frontend | — | React | — |
+| Backend | Django, Django Ninja, APIs REST | Spring Boot, FastAPI, Flask | Jakarta |
+| Frontend | — | React, Vue | — |
 | Datos | PostgreSQL, ClickHouse | MySQL | — |
 | IA | Google ADK, integración de LLMs, sistemas multiagente, prompt engineering | VLMs, Ollama (TFG) | — |
 | Calidad | Pytest, pruebas de integración | — | Mockito |
