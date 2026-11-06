@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Saúl Conejo Mínguez · Ingeniero de software junior (Backend e IA)",
+    "description": "Ingeniero de software junior en backend con Python e IA aplicada. Experiencia con Django, PostgreSQL, sistemas multiagente con LLMs y visión por computador.",
+    "locale": "es_ES"
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "nav": "Navegación principal",
+    "switchTo": "EN: ver esta página en inglés",
+    "switchLabel": "EN",
+    "newTab": "(se abre en una pestaña nueva)"
+  },
+  "nav": {
+    "featured": "TFG",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "education": "Formación",
+    "about": "Sobre mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "line": "Construyo APIs fiables y sistemas de IA que pongo a prueba: de agentes con LLMs a un dron simulado que navega guiado por lo que ve.",
+    "status": "Disponible ya · Remoto o Alicante, Valencia, Murcia y Europa",
+    "cv": "Descargar CV",
+    "contact": "Contactar",
+    "github": "GitHub",
+    "specBase": "Base",
+    "specAvailability": "Estado",
+    "specEnglish": "Inglés"
+  },
+  "featured": {
+    "kicker": "Proyecto destacado",
+    "lead": "Mi TFG: un dron simulado que interpreta lo que ve con un modelo de visión y lenguaje y decide cómo moverse por interiores.",
+    "headline": "metas alcanzadas en las pruebas (29/45), frente al 22,2 % de la propuesta de partida con el mismo modelo.",
+    "problem": "Problema",
+    "built": "Qué construí",
+    "decisions": "Decisiones técnicas",
+    "results": "Resultados",
+    "resultsCaption": "Porcentaje de misiones que alcanzan la meta, según las puertas que hay que cruzar",
+    "doors": "Puertas",
+    "own": "Mi propuesta",
+    "base": "Propuesta base",
+    "total": "Global",
+    "limits": "Limitaciones",
+    "repo": "Ver el código",
+    "paper": "Artículo de VLN-Pilot",
+    "videoCaption": "Simulación en Unity (37 s, sin sonido). La cámara del dron sale del dormitorio, cruza una puerta y llega hasta el frigorífico de la cocina.",
+    "videoFallback": "Tu navegador no puede reproducir este vídeo.",
+    "videoCaptionsLabel": "Descripción en español",
+    "diagramTitle": "Bucle de percepción y acción See, Point, Fly",
+    "diagramDesc": "Tres pasos en bucle: See, ver la imagen de la cámara; Point, el modelo señala un punto en la imagen; Fly, la capa de control lo convierte en movimiento y el ciclo vuelve a empezar.",
+    "steps": [
+      { "name": "See", "text": "La cámara del dron captura la imagen." },
+      { "name": "Point", "text": "El VLM señala en ella un punto hacia el que ir." },
+      { "name": "Fly", "text": "La capa de control lo convierte en movimiento." }
+    ]
+  },
+  "experience": {
+    "title": "Experiencia",
+    "lead": "Dos prácticas en las que trabajé en producción, no en ejercicios."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "lead": "Lo que he construido y cómo lo he pensado.",
+    "private": "Código privado (proyecto de empresa)",
+    "repo": "Ver el código",
+    "inProgress": "En desarrollo"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "lead": "Separadas entre lo que he usado en trabajo real y lo que he usado en proyectos.",
+    "work": "Trabajo real",
+    "projects": "Proyectos",
+    "learning": "Aprendiendo"
+  },
+  "education": {
+    "title": "Formación e idiomas",
+    "degree": "Formación",
+    "languages": "Idiomas"
+  },
+  "about": {
+    "title": "Sobre mí",
+    "paragraphs": [
+      "Soy ingeniero informático por la Universidad de Alicante, especializado en Ingeniería del Software. Me interesa construir software que funcione en el mundo real: APIs fiables, datos bien gestionados y sistemas de IA que hagan algo útil más allá de una demo.",
+      "En Beply diseñé la arquitectura multiagente inicial de su asistente conversacional con Google ADK, y en NAX Solutions desarrollé y refactoricé endpoints REST con Django Ninja para una plataforma de datos satelitales, además de participar en migraciones de datos de ClickHouse a PostgreSQL. En mi TFG desarrollé un sistema de navegación autónoma para un dron simulado, guiado por un modelo de visión y lenguaje, y lo evalué frente a la propuesta de la que partía.",
+      "Ahora busco mi primer puesto como ingeniero junior de backend o de IA aplicada, en remoto o en Alicante, Valencia, Murcia o Europa."
+    ]
+  },
+  "contact": {
+    "title": "¿Hablamos?",
+    "lead": "Estoy buscando mi primer puesto como ingeniero junior de backend o IA aplicada. Respondo rápido por email o LinkedIn.",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "built": "Hecho con Astro",
+    "code": "Código en GitHub"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "text": "Esta dirección no existe.",
+    "back": "Volver al inicio"
+  },
+  "months": [
+    "ene.",
+    "feb.",
+    "mar.",
+    "abr.",
+    "may.",
+    "jun.",
+    "jul.",
+    "ago.",
+    "sep.",
+    "oct.",
+    "nov.",
+    "dic."
+  ],
+  "percent": "{n} %"
+}

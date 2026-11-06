@@ -1,0 +1,45 @@
+---
+import CvLink from "./CvLink.astro";
+import Icon from "./Icon.astro";
+import { getText, localized, profile } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang);
+const english = profile.languages[1];
+---
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <p class="hero__status mono">{text.hero.status}</p>
+      <h1>{profile.name}</h1>
+      <p class="hero__role">{localized(profile.role, lang)}</p>
+      <p class="hero__line">{text.hero.line}</p>
+      <div class="actions">
+        <CvLink lang={lang} primary />
+        <a class="btn" href="#contact">
+          <Icon name="mail" />
+          {text.hero.contact}
+        </a>
+        <a class="btn" href={profile.contact.github}>
+          <Icon name="github" />
+          {text.hero.github}
+        </a>
+      </div>
+    </div>
+    <dl class="spec">
+      <div>
+        <dt class="mono">{text.hero.specBase}</dt>
+        <dd>{localized(profile.location, lang)}</dd>
+      </div>
+      <div>
+        <dt class="mono">{text.hero.specAvailability}</dt>
+        <dd>{localized(profile.availability, lang)}</dd>
+      </div>
+      <div>
+        <dt class="mono">{text.hero.specEnglish}</dt>
+        <dd>{localized(english.level, lang)}</dd>
+      </div>
+    </dl>
+  </div>
+</section>

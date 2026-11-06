@@ -1,0 +1,52 @@
+---
+import Icon from "./Icon.astro";
+import { getText, localized, profile } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang).projects;
+const newTab = getText(lang).a11y.newTab;
+const projects = profile.projects.filter((project) => !project.featured);
+---
+
+<section class="section" id="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="projects-title">{text.title}</h2>
+      <p class="section__lead">{text.lead}</p>
+    </div>
+    <ul class="cards">
+      {projects.map((project) => (
+        <li class="card">
+          <div>
+            <h3>{localized(project.title, lang)}</h3>
+            <p class="card__type mono">{localized(project.type, lang)}</p>
+          </div>
+          <p>{localized(project.summary, lang)}</p>
+          <ul class="chips" aria-label="Stack">
+            {project.stack.map((item) => (
+              <li class="chip">{localized(item, lang)}</li>
+            ))}
+          </ul>
+          <div class="card__foot">
+            {project.status === "in_progress" && <span class="badge">{text.inProgress}</span>}
+            {project.links.repo && (
+              <a href={project.links.repo} target="_blank" rel="noopener">
+                <Icon name="github" />
+                {text.repo}
+                <span class="visually-hidden">
+                  {localized(project.title, lang)} {newTab}
+                </span>
+              </a>
+            )}
+            {project.confidential && (
+              <span class="private-label">
+                <Icon name="lock" />
+                {text.private}
+              </span>
+            )}
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

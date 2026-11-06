@@ -1,0 +1,19 @@
+---
+import { getText } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang).about;
+---
+
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="about-title">{text.title}</h2>
+    </div>
+    <div class="prose">
+      {text.paragraphs.map((paragraph) => (
+        <p>{paragraph}</p>
+      ))}
+    </div>
+  </div>
+</section>

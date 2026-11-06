@@ -1,0 +1,17 @@
+---
+import Icon from "./Icon.astro";
+import { getText, isPending, profile } from "../lib/content.js";
+
+const { lang, primary = false } = Astro.props;
+const file = profile.cv_files[lang];
+const text = getText(lang);
+---
+
+{isPending(file) ? (
+  <span class="pending">{file}</span>
+) : (
+  <a class:list={["btn", { "btn--primary": primary }]} href={file} download>
+    <Icon name="download" />
+    {text.hero.cv}
+  </a>
+)}

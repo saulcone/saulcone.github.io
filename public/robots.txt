@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saulcone.github.io/sitemap-index.xml

@@ -1,0 +1,43 @@
+---
+import { getText, localized, profile } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang).skills;
+const levels = [
+  { key: "work", label: text.work, chip: "chip--work" },
+  { key: "projects", label: text.projects, chip: "" },
+  { key: "learning", label: text.learning, chip: "chip--learning" },
+];
+---
+
+<section class="section" id="skills" aria-labelledby="skills-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="skills-title">{text.title}</h2>
+      <p class="section__lead">{text.lead}</p>
+    </div>
+    <div class="skills">
+      {profile.skills.categories.map((category) => (
+        <div class="skill-group">
+          <h3>{localized(category.name, lang)}</h3>
+          <dl>
+            {levels
+              .filter((level) => category[level.key].length > 0)
+              .map((level) => (
+                <div class="skill-level">
+                  <dt class="mono">{level.label}</dt>
+                  <dd>
+                    <ul class="chips">
+                      {category[level.key].map((skill) => (
+                        <li class:list={["chip", level.chip]}>{localized(skill, lang)}</li>
+                      ))}
+                    </ul>
+                  </dd>
+                </div>
+              ))}
+          </dl>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

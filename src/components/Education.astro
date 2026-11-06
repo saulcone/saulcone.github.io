@@ -1,0 +1,37 @@
+---
+import { formatRange, getText, localized, profile } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang).education;
+---
+
+<section class="section" id="education" aria-labelledby="education-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="education-title">{text.title}</h2>
+    </div>
+    <div class="compact">
+      <div>
+        <h3 class="subhead">{text.degree}</h3>
+        {profile.education.map((item) => (
+          <>
+            <p>{localized(item.degree, lang)}</p>
+            <p>
+              {item.institution} · {formatRange(item.start, item.end, lang)}
+            </p>
+          </>
+        ))}
+      </div>
+      <div>
+        <h3 class="subhead">{text.languages}</h3>
+        <ul>
+          {profile.languages.map((language) => (
+            <li>
+              <strong>{localized(language.name, lang)}:</strong> {localized(language.level, lang)}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

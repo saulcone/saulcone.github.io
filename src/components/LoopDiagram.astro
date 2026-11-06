@@ -1,0 +1,69 @@
+---
+import { getText } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang).featured;
+const nodes = [
+  { x: 90, label: text.steps[0].name },
+  { x: 300, label: text.steps[1].name },
+  { x: 510, label: text.steps[2].name },
+];
+const markerId = `loop-arrow-${lang}`;
+---
+
+<figure class="loop">
+  <svg viewBox="0 0 600 170" role="img" aria-labelledby={`${markerId}-t ${markerId}-d`}>
+    <title id={`${markerId}-t`}>{text.diagramTitle}</title>
+    <desc id={`${markerId}-d`}>{text.diagramDesc}</desc>
+    <defs>
+      <marker
+        id={markerId}
+        viewBox="0 0 10 10"
+        refX="9"
+        refY="5"
+        markerWidth="7"
+        markerHeight="7"
+        orient="auto-start-reverse"
+      >
+        <path d="M0 0 10 5 0 10z" fill="#0b6b66"></path>
+      </marker>
+    </defs>
+    <g fill="none" stroke="#0b6b66" stroke-width="2">
+      <line x1="158" y1="55" x2="228" y2="55" marker-end={`url(#${markerId})`}></line>
+      <line x1="368" y1="55" x2="438" y2="55" marker-end={`url(#${markerId})`}></line>
+      <path d="M510 92 V140 H90 V96" marker-end={`url(#${markerId})`}></path>
+    </g>
+    {nodes.map((node) => (
+      <g>
+        <rect
+          x={node.x - 66}
+          y="20"
+          width="132"
+          height="70"
+          rx="6"
+          fill="#e2f0ee"
+          stroke="#0b6b66"
+          stroke-width="2"
+        />
+        <text
+          x={node.x}
+          y="64"
+          text-anchor="middle"
+          fill="#084f4b"
+          font-size="28"
+          font-weight="650"
+          font-family="Inter Variable, system-ui, sans-serif"
+        >
+          {node.label}
+        </text>
+      </g>
+    ))}
+  </svg>
+  <ol>
+    {text.steps.map((step) => (
+      <li>
+        <strong>{step.name}:</strong> {step.text}
+      </li>
+    ))}
+  </ol>
+</figure>

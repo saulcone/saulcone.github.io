@@ -1,0 +1,37 @@
+---
+import { getText, homePath, profile } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang);
+const otherLang = lang === "es" ? "en" : "es";
+const links = ["featured", "experience", "projects", "skills", "education", "about", "contact"];
+---
+
+<a class="skip-link" href="#main">
+  {text.a11y.skip}
+</a>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href={homePath(lang)}>
+      {profile.name}
+    </a>
+    <nav class="site-nav" aria-label={text.a11y.nav}>
+      <ul>
+        {links.map((id) => (
+          <li>
+            <a href={`#${id}`}>{text.nav[id]}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+    <a
+      class="lang-switch"
+      href={homePath(otherLang)}
+      hreflang={otherLang}
+      lang={otherLang}
+      aria-label={text.a11y.switchTo}
+    >
+      {text.a11y.switchLabel}
+    </a>
+  </div>
+</header>

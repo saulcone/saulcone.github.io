@@ -1,0 +1,120 @@
+{
+  "meta": {
+    "title": "Saúl Conejo Mínguez · Junior Software Engineer (Backend & AI)",
+    "description": "Junior software engineer in Python backend and applied AI. Experience with Django, PostgreSQL, multi-agent LLM systems and computer vision.",
+    "locale": "en_US"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "nav": "Main navigation",
+    "switchTo": "ES: view this page in Spanish",
+    "switchLabel": "ES",
+    "newTab": "(opens in a new tab)"
+  },
+  "nav": {
+    "featured": "Thesis",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "education": "Education",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "line": "I build reliable APIs and AI systems I put to the test, from LLM agents to a simulated drone that navigates by what it sees.",
+    "status": "Available now · Remote or Alicante, Valencia, Murcia and Europe",
+    "cv": "Download CV",
+    "contact": "Get in touch",
+    "github": "GitHub",
+    "specBase": "Based in",
+    "specAvailability": "Status",
+    "specEnglish": "English"
+  },
+  "featured": {
+    "kicker": "Featured project",
+    "lead": "My thesis: a simulated drone that interprets what it sees with a vision-language model and decides how to move indoors.",
+    "headline": "of test missions reached the goal (29/45), versus 22.2% for the approach it started from, using the same model.",
+    "problem": "Problem",
+    "built": "What I built",
+    "decisions": "Technical decisions",
+    "results": "Results",
+    "resultsCaption": "Share of missions reaching the goal, by number of doors to cross",
+    "doors": "Doors",
+    "own": "My approach",
+    "base": "Baseline",
+    "total": "Overall",
+    "limits": "Limitations",
+    "repo": "View the code",
+    "paper": "VLN-Pilot paper",
+    "videoCaption": "Unity simulation (37 s, no sound). The drone's camera leaves the bedroom, crosses a door and reaches the kitchen fridge.",
+    "videoFallback": "Your browser can't play this video.",
+    "videoCaptionsLabel": "English description",
+    "diagramTitle": "See, Point, Fly perception–action loop",
+    "diagramDesc": "Three steps in a loop: See, the camera image; Point, the model points at a spot in the image; Fly, the control layer turns it into motion and the cycle starts again.",
+    "steps": [
+      { "name": "See", "text": "The drone's camera captures the image." },
+      { "name": "Point", "text": "The VLM points at a spot in it to head for." },
+      { "name": "Fly", "text": "The control layer turns that into motion." }
+    ]
+  },
+  "experience": {
+    "title": "Experience",
+    "lead": "Two internships working on production systems, not exercises."
+  },
+  "projects": {
+    "title": "Projects",
+    "lead": "What I've built and how I thought about it.",
+    "private": "Private code (company project)",
+    "repo": "View the code",
+    "inProgress": "In progress"
+  },
+  "skills": {
+    "title": "Skills",
+    "lead": "Split between what I've used at work and what I've used in projects.",
+    "work": "At work",
+    "projects": "In projects",
+    "learning": "Learning"
+  },
+  "education": {
+    "title": "Education and languages",
+    "degree": "Education",
+    "languages": "Languages"
+  },
+  "about": {
+    "title": "About me",
+    "paragraphs": [
+      "I'm a computer engineer from the University of Alicante, specialized in Software Engineering. I like building software that works in the real world: reliable APIs, well-managed data and AI systems that do something useful beyond a demo.",
+      "At Beply I designed the initial multi-agent architecture of their conversational assistant with Google ADK, and at NAX Solutions I built and refactored REST endpoints with Django Ninja for a satellite-data platform and contributed to data migrations from ClickHouse to PostgreSQL. For my bachelor's thesis I built an autonomous navigation system for a simulated drone, guided by a vision-language model, and evaluated it against the approach it started from.",
+      "I'm now looking for my first role as a junior backend or applied AI engineer, remote or in Alicante, Valencia, Murcia or elsewhere in Europe."
+    ]
+  },
+  "contact": {
+    "title": "Let's talk",
+    "lead": "I'm looking for my first role as a junior backend or applied AI engineer. I reply quickly by email or LinkedIn.",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "built": "Built with Astro",
+    "code": "Code on GitHub"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "This address doesn't exist.",
+    "back": "Back to home"
+  },
+  "months": [
+    "Jan.",
+    "Feb.",
+    "Mar.",
+    "Apr.",
+    "May",
+    "Jun.",
+    "Jul.",
+    "Aug.",
+    "Sep.",
+    "Oct.",
+    "Nov.",
+    "Dec."
+  ],
+  "percent": "{n}%"
+}
