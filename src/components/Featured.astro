@@ -1,0 +1,149 @@
+---
+import Icon from "./Icon.astro";
+import LoopDiagram from "./LoopDiagram.astro";
+import { formatPercent, getText, localized, profile } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang).featured;
+const newTab = getText(lang).a11y.newTab;
+const project = profile.projects.find((item) => item.featured);
+const { rows, total } = project.results;
+---
+
+<section class="section featured" id="featured" aria-labelledby="featured-title">
+  <div class="container">
+    <div class="section__head">
+      <p class="section__kicker mono">
+        {text.kicker} · {localized(project.type, lang)}
+      </p>
+      <h2 id="featured-title">{localized(project.title, lang)}</h2>
+      <p class="section__lead">{text.lead}</p>
+    </div>
+
+    <div class="featured__grid">
+      <div class="featured__media">
+        <figure>
+          <video
+            controls
+            playsinline
+            preload="none"
+            width="480"
+            height="360"
+            poster={project.links.demo_poster}
+          >
+            <source src={project.links.demo_video} type="video/mp4" />
+            <track
+              kind="captions"
+              src={`/video/tfg-simulacion.${lang}.vtt`}
+              srclang={lang}
+              label={text.videoCaptionsLabel}
+              default
+            />
+            {text.videoFallback}
+          </video>
+          <figcaption>{text.videoCaption}</figcaption>
+        </figure>
+        <LoopDiagram lang={lang} />
+        <div>
+          <h3 class="subhead">{text.limits}</h3>
+          <ul class="bullets">
+            {project.limitations[lang].map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      <div class="featured__body">
+        <p class="headline">
+          <strong>{formatPercent(total.own.pct, lang)}</strong>
+          <span>{text.headline}</span>
+        </p>
+
+        <div>
+          <h3 class="subhead">{text.problem}</h3>
+          <p>{localized(project.problem, lang)}</p>
+        </div>
+
+        <div>
+          <h3 class="subhead">{text.built}</h3>
+          <ul class="bullets">
+            {project.highlights[lang].map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="subhead">{text.decisions}</h3>
+          <ul class="bullets">
+            {project.decisions[lang].map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="subhead">{text.results}</h3>
+          <table class="results">
+            <caption>{text.resultsCaption}</caption>
+            <thead>
+              <tr>
+                <th scope="col">{text.doors}</th>
+                <th scope="col">{text.own}</th>
+                <th scope="col">{text.base}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row) => (
+                <tr>
+                  <th scope="row">{row.doors}</th>
+                  <td>
+                    {formatPercent(row.own.pct, lang)}
+                    <span class="runs">{row.own.runs}</span>
+                  </td>
+                  <td>
+                    {formatPercent(row.base.pct, lang)}
+                    <span class="runs">{row.base.runs}</span>
+                  </td>
+                </tr>
+              ))}
+              <tr class="total">
+                <th scope="row">{text.total}</th>
+                <td>
+                  {formatPercent(total.own.pct, lang)}
+                  <span class="runs">{total.own.runs}</span>
+                </td>
+                <td>
+                  {formatPercent(total.base.pct, lang)}
+                  <span class="runs">{total.base.runs}</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <ul class="chips" aria-label="Stack">
+          {project.stack.map((item) => (
+            <li class="chip">{item}</li>
+          ))}
+        </ul>
+
+        <p class="credit">{localized(project.credit, lang)}</p>
+
+        <div class="actions">
+          <a class="btn btn--primary" href={project.links.repo} target="_blank" rel="noopener">
+            <Icon name="github" />
+            {text.repo}
+            <span class="visually-hidden">{newTab}</span>
+          </a>
+          <a class="btn" href={project.links.paper} target="_blank" rel="noopener">
+            <Icon name="external" />
+            {text.paper}
+            <span class="visually-hidden">{newTab}</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

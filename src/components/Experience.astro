@@ -1,0 +1,42 @@
+---
+import { formatRange, getText, localized, profile } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang).experience;
+---
+
+<section class="section" id="experience" aria-labelledby="experience-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="experience-title">{text.title}</h2>
+      <p class="section__lead">{text.lead}</p>
+    </div>
+    <ol class="timeline">
+      {profile.experience.map((job) => (
+        <li class="timeline__item">
+          <p class="timeline__meta mono">
+            {formatRange(job.start, job.end, lang)}
+            <br />
+            {job.location}
+          </p>
+          <div class="timeline__body">
+            <div>
+              <h3>{job.company}</h3>
+              <p class="timeline__role">{localized(job.role, lang)}</p>
+            </div>
+            <ul class="bullets">
+              {job.highlights[lang].map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+            <ul class="chips" aria-label="Stack">
+              {job.stack.map((item) => (
+                <li class="chip">{localized(item, lang)}</li>
+              ))}
+            </ul>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>

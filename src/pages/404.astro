@@ -1,0 +1,22 @@
+---
+import Base from "../layouts/Base.astro";
+import { getText } from "../lib/content.js";
+
+const es = getText("es").notFound;
+const en = getText("en").notFound;
+---
+
+<Base lang="es" title={es.title} description={es.text} noindex>
+  <main class="container not-found">
+    <h1>{es.title}</h1>
+    <p>{es.text}</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="/">
+        {es.back}
+      </a>
+      <a class="btn" href="/en/" hreflang="en" lang="en">
+        {en.back}
+      </a>
+    </div>
+  </main>
+</Base>

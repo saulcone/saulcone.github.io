@@ -1,0 +1,34 @@
+---
+import CvLink from "./CvLink.astro";
+import Icon from "./Icon.astro";
+import { encodeEntities, getText, localized, profile } from "../lib/content.js";
+
+const { lang } = Astro.props;
+const text = getText(lang);
+const email = profile.contact.email;
+const mailHref = encodeEntities(`mailto:${email}`);
+---
+
+<section class="section contact" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="section__head">
+      <h2 id="contact-title">{text.contact.title}</h2>
+      <p class="section__lead">{text.contact.lead}</p>
+    </div>
+    <div class="actions">
+      <Fragment
+        set:html={`<a class="btn btn--primary" href="${mailHref}">${encodeEntities(email)}</a>`}
+      />
+      <a class="btn" href={profile.contact.linkedin}>
+        <Icon name="linkedin" />
+        {text.contact.linkedin}
+      </a>
+      <a class="btn" href={profile.contact.github}>
+        <Icon name="github" />
+        {text.hero.github}
+      </a>
+      <CvLink lang={lang} />
+    </div>
+    <p class="contact__note">{localized(profile.availability, lang)}</p>
+  </div>
+</section>

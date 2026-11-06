@@ -1,0 +1,12 @@
+dist/
+.astro/
+.lighthouseci/
+node_modules/
+archives/
+videos_tfg/
+docs/
+data/
+public/
+AGENTS.md
+CLAUDE.md
+package-lock.json

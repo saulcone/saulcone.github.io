@@ -1,0 +1,531 @@
+{
+  "name": "Saúl Conejo Mínguez",
+  "role": {
+    "es": "Ingeniero de software junior · Backend e IA",
+    "en": "Junior Software Engineer · Backend & AI"
+  },
+  "location": {
+    "es": "Alicante, España · Abierto a remoto y a reubicación",
+    "en": "Alicante, Spain · Open to remote and relocation"
+  },
+  "availability": {
+    "es": "Disponibilidad inmediata · Ciudadano de la UE (sin necesidad de visado en la UE)",
+    "en": "Available immediately · EU citizen (no visa sponsorship needed in the EU)"
+  },
+  "contact": {
+    "email": "saulconemin@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/saul-conejo-minguez/",
+    "github": "https://github.com/saulcone",
+    "phone_public": false
+  },
+  "cv_files": {
+    "es": "/cv/SaulConejo_CV_ES.pdf",
+    "en": "/cv/SaulConejo_CV_EN.pdf"
+  },
+  "education": [
+    {
+      "institution": "Universidad de Alicante",
+      "degree": {
+        "es": "Grado en Ingeniería Informática – Especialidad en Ingeniería del Software",
+        "en": "BSc in Computer Engineering – Software Engineering track"
+      },
+      "start": "2022-08",
+      "end": "2026-07",
+      "location": "Alicante, España"
+    }
+  ],
+  "experience": [
+    {
+      "company": "NAX Solutions",
+      "role": {
+        "es": "Ingeniero de Software Backend (prácticas)",
+        "en": "Backend Software Engineer Intern"
+      },
+      "start": "2026-06",
+      "end": "2026-08",
+      "location": "Alicante, España",
+      "stack": [
+        "Python",
+        "Django",
+        "Django Ninja",
+        "PostgreSQL",
+        "ClickHouse",
+        "Poetry",
+        "GitLab CI/CD",
+        "Agile"
+      ],
+      "highlights": {
+        "es": [
+          "Desarrollé y mantuve más de 10 endpoints REST en Python con Django Ninja para una plataforma B2B de datos e imágenes satelitales del sector agrotecnológico.",
+          "Propuse y lideré la refactorización de endpoints clave, sustituyendo filtros complejos por recursos REST planos para mejorar el tiempo de respuesta, la escalabilidad y la coherencia con los estándares de la API.",
+          "Traduje requisitos de producto (Source of Truth) en especificaciones técnicas y tareas de desarrollo dentro de un equipo Agile.",
+          "Participé en scripts de migración de grandes volúmenes de datos analíticos de ClickHouse a PostgreSQL.",
+          "Gestioné dependencias y actualizaciones con Poetry, manteniendo la estabilidad con pruebas de integración en pipelines de GitLab CI/CD."
+        ],
+        "en": [
+          "Built and maintained 10+ REST endpoints in Python with Django Ninja for a B2B satellite-imagery data platform in the AgTech sector.",
+          "Proposed and led a refactor of key endpoints, replacing complex filter logic with flat REST resources to improve response times, scalability and consistency with the team's API standards.",
+          "Turned product requirements (Source of Truth) into technical specifications and actionable tasks within an Agile team.",
+          "Contributed to migration scripts moving high-volume analytical data from ClickHouse to PostgreSQL.",
+          "Managed dependencies and package upgrades with Poetry, keeping the system stable through integration tests in GitLab CI/CD pipelines."
+        ]
+      },
+      "confidential": true
+    },
+    {
+      "company": "Beply",
+      "role": {
+        "es": "Ingeniero de Software IA / Backend (prácticas)",
+        "en": "Software Engineer Intern (AI/Backend)"
+      },
+      "start": "2025-06",
+      "end": "2025-12",
+      "location": "Remoto, España",
+      "stack": [
+        "Python",
+        "Google ADK",
+        "LLMs",
+        {
+          "es": "Sistemas multiagente",
+          "en": "Multi-agent systems"
+        },
+        "Pytest"
+      ],
+      "highlights": {
+        "es": [
+          "Diseñé e implementé la arquitectura multiagente inicial del agente virtual conversacional de la empresa, sentando las bases de su infraestructura de IA.",
+          "Desarrollé un sistema de agentes desacoplado y tolerante a fallos en Python con Google ADK (LlmAgent, BaseTool) que enruta las peticiones de los clientes hacia agentes especializados.",
+          "Implementé una suite de pruebas automatizadas con Pytest que valida la consistencia de las respuestas de los modelos y la integridad de la base de datos antes de cada despliegue en producción."
+        ],
+        "en": [
+          "Designed and built the initial multi-agent architecture behind the company's conversational virtual agent, laying the foundation of its AI infrastructure.",
+          "Developed a decoupled, fault-tolerant agent system in Python with Google ADK (LlmAgent, BaseTool) that routes client requests to specialized AI agents.",
+          "Built an automated Pytest suite validating the consistency of model responses and database integrity before production deployments."
+        ]
+      },
+      "confidential": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "tfg-drone-vlm",
+      "featured": true,
+      "title": {
+        "es": "Navegación autónoma de drones con VLMs",
+        "en": "Autonomous Drone Navigation with VLMs"
+      },
+      "type": {
+        "es": "Trabajo Fin de Grado · Simulación",
+        "en": "Bachelor's thesis · Simulation"
+      },
+      "period": "2026-01 / 2026-07",
+      "stack": [
+        "Python",
+        "Qwen3-VL",
+        "Ollama",
+        "Unity",
+        "ML-Agents",
+        "Flask",
+        "OpenCV",
+        "Prompt engineering"
+      ],
+      "summary": {
+        "es": "Sistema de navegación autónoma para un dron simulado en Unity, guiado por un modelo de visión y lenguaje (VLM) que interpreta la cámara y decide cómo moverse por interiores.",
+        "en": "Autonomous navigation system for a Unity-simulated drone, guided by a vision-language model (VLM) that interprets the camera feed and decides how to move indoors."
+      },
+      "highlights": {
+        "es": [
+          "Movilidad adaptativa inspirada en See, Point, Fly: el VLM señala puntos en la imagen y la capa de control los convierte en movimiento.",
+          "Capa de seguridad que intercepta las órdenes cuando el dron está a punto de colisionar, sobre todo en pasos estrechos.",
+          "Misiones con metas explícitas y medidor de progreso: ninguna meta falsa en las pruebas.",
+          "Inyección constante de contexto para que el modelo no pierda el objetivo.",
+          "Evaluación con 90 ejecuciones: 9 escenarios × 5 repeticiones × 2 sistemas, con el mismo VLM."
+        ],
+        "en": [
+          "Adaptive mobility inspired by See, Point, Fly: the VLM points at the image and the control layer turns those points into motion.",
+          "Safety layer that intercepts commands when the drone is about to collide, especially in narrow passages.",
+          "Missions with explicit goals and a progress meter: no false goals in testing.",
+          "Constant context injection so the model doesn't lose track of the goal.",
+          "Evaluation over 90 runs: 9 scenarios × 5 repetitions × 2 systems, using the same VLM."
+        ]
+      },
+      "links": {
+        "repo": "https://github.com/saulcone/drone-llm-saul/tree/nuevo_flujo_desarrollo",
+        "paper": "https://arxiv.org/abs/2602.05552",
+        "demo_video": "/video/tfg-simulacion.mp4",
+        "demo_poster": "/img/tfg-simulacion-poster.webp"
+      },
+      "thesis_title": "Ceguera Volumétrica en Navegación Autónoma de Drones mediante VLM",
+      "problem": {
+        "es": "Con comandos discretos, un VLM no resuelve bien el cruce de puertas: no percibe el volumen del dron respecto al hueco («ceguera volumétrica»), oscila y pierde el objetivo.",
+        "en": "With discrete commands, a VLM struggles to cross doorways: it can't perceive the drone's volume relative to the gap (\"volumetric blindness\"), so it oscillates and loses the goal."
+      },
+      "decisions": {
+        "es": [
+          "Bucle de percepción–acción frente a comandos discretos, para reducir las oscilaciones y los bucles de realineación.",
+          "Qwen3-VL 235B en la nube a través de Ollama, porque hacer las pruebas en local no era viable sin una GPU capaz."
+        ],
+        "en": [
+          "A perception–action loop instead of discrete commands, to reduce oscillation and re-alignment loops.",
+          "Qwen3-VL 235B in the cloud through Ollama, because testing locally wasn't viable without a capable GPU."
+        ]
+      },
+      "results": {
+        "rows": [
+          {
+            "doors": 0,
+            "own": {
+              "pct": "100",
+              "runs": "15/15"
+            },
+            "base": {
+              "pct": "66,7",
+              "runs": "10/15"
+            }
+          },
+          {
+            "doors": 1,
+            "own": {
+              "pct": "70",
+              "runs": "14/20"
+            },
+            "base": {
+              "pct": "0",
+              "runs": "0/20"
+            }
+          },
+          {
+            "doors": 2,
+            "own": {
+              "pct": "0",
+              "runs": "0/10"
+            },
+            "base": {
+              "pct": "0",
+              "runs": "0/10"
+            }
+          }
+        ],
+        "total": {
+          "own": {
+            "pct": "64,4",
+            "runs": "29/45"
+          },
+          "base": {
+            "pct": "22,2",
+            "runs": "10/45"
+          }
+        }
+      },
+      "limitations": {
+        "es": [
+          "Ninguna misión de dos puertas se completó: tras los giros, el modelo pierde la referencia.",
+          "Con vistas uniformes, como una pared de cerca, el dron se queda sin puntos de referencia.",
+          "La capa de seguridad reduce las colisiones, pero no las elimina.",
+          "Todo se probó en simulación: el paso a un DJI Tello real queda como trabajo futuro."
+        ],
+        "en": [
+          "No two-door mission succeeded: after turning, the model loses its reference.",
+          "With uniform views, such as a wall up close, the drone runs out of visual references.",
+          "The safety layer reduces collisions but doesn't eliminate them.",
+          "Everything was tested in simulation: moving to a real DJI Tello is future work."
+        ]
+      },
+      "credit": {
+        "es": "Parte de VLN-Pilot (Domínguez-Dager et al., 2026). El código base es de Bessie Domínguez y Sergio Suescun.",
+        "en": "Builds on VLN-Pilot (Domínguez-Dager et al., 2026). The base code is by Bessie Domínguez and Sergio Suescun."
+      }
+    },
+    {
+      "id": "multiagent-assistant",
+      "featured": false,
+      "title": {
+        "es": "Arquitectura multiagente para un asistente conversacional",
+        "en": "Multi-agent architecture for a conversational assistant"
+      },
+      "type": {
+        "es": "Prácticas en Beply (descrito a alto nivel)",
+        "en": "Internship at Beply (high-level description)"
+      },
+      "period": "2025-06 / 2025-12",
+      "stack": [
+        "Python",
+        "Google ADK",
+        "LLMs",
+        "Pytest"
+      ],
+      "summary": {
+        "es": "Diseño del sistema de agentes que enruta las peticiones de clientes hacia agentes especializados, desacoplado y tolerante a fallos, con validación automatizada antes de cada despliegue.",
+        "en": "Design of the agent system routing client requests to specialized agents, decoupled and fault-tolerant, with automated validation before each deployment."
+      },
+      "confidential": true,
+      "links": {}
+    },
+    {
+      "id": "nax-api",
+      "featured": false,
+      "title": {
+        "es": "API REST para una plataforma de datos satelitales",
+        "en": "REST API for a satellite-data platform"
+      },
+      "type": {
+        "es": "Prácticas en NAX Solutions (descrito a alto nivel)",
+        "en": "Internship at NAX Solutions (high-level description)"
+      },
+      "period": "2026-06 / 2026-08",
+      "stack": [
+        "Python",
+        "Django Ninja",
+        "PostgreSQL",
+        "ClickHouse",
+        "GitLab CI/CD"
+      ],
+      "summary": {
+        "es": "Endpoints REST, refactorización hacia recursos planos para mejorar rendimiento y coherencia, y migración de datos analíticos de ClickHouse a PostgreSQL.",
+        "en": "REST endpoints, refactor towards flat resources for performance and consistency, and analytical data migration from ClickHouse to PostgreSQL."
+      },
+      "confidential": true,
+      "links": {}
+    },
+    {
+      "id": "habit-tracker",
+      "featured": false,
+      "status": "in_progress",
+      "title": {
+        "es": "Habit Tracker",
+        "en": "Habit Tracker"
+      },
+      "type": {
+        "es": "Proyecto personal (en desarrollo)",
+        "en": "Personal project (in progress)"
+      },
+      "stack": [
+        "Java 21",
+        "Spring Boot",
+        "PostgreSQL",
+        "Flyway",
+        "JUnit 5",
+        "Mockito",
+        "Docker Compose"
+      ],
+      "summary": {
+        "es": "Backend para definir hábitos y registrar el progreso día a día, calculando cada día según la zona horaria del usuario. Lo construyo capa a capa para aprender Spring Boot.",
+        "en": "Backend for defining habits and logging progress day by day, computing each day in the user's time zone. I'm building it layer by layer to learn Spring Boot."
+      },
+      "links": {
+        "repo": "https://github.com/saulcone/habit-tracker"
+      }
+    },
+    {
+      "id": "inventory-system",
+      "featured": false,
+      "title": {
+        "es": "Sistema de gestión de inventario",
+        "en": "Inventory management system"
+      },
+      "type": {
+        "es": "Proyecto full-stack",
+        "en": "Full-stack project"
+      },
+      "stack": [
+        "Python",
+        "Django Ninja",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "summary": {
+        "es": "Aplicación de productos e inventario con panel de métricas, autenticación JWT y control de acceso por roles.",
+        "en": "Product and inventory application with a metrics dashboard, JWT authentication and role-based access control."
+      },
+      "links": {
+        "repo": "https://github.com/saulcone/event-driven-inventory-api"
+      }
+    },
+    {
+      "id": "portfolio",
+      "featured": false,
+      "title": {
+        "es": "Este portfolio",
+        "en": "This portfolio"
+      },
+      "type": {
+        "es": "Proyecto personal",
+        "en": "Personal project"
+      },
+      "stack": [
+        "Astro",
+        "CSS",
+        "GitHub Actions"
+      ],
+      "summary": {
+        "es": "Web estática bilingüe, accesible y con CI/CD en GitHub Actions.",
+        "en": "Bilingual, accessible static site with CI/CD on GitHub Actions."
+      },
+      "links": {
+        "repo": "https://github.com/saulcone/saulcone.github.io"
+      }
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "name": {
+          "es": "Lenguajes",
+          "en": "Languages"
+        },
+        "work": [
+          "Python",
+          "SQL"
+        ],
+        "projects": [
+          "Java",
+          "C++",
+          "TypeScript"
+        ],
+        "learning": []
+      },
+      {
+        "name": {
+          "es": "Backend",
+          "en": "Backend"
+        },
+        "work": [
+          "Django",
+          "Django Ninja",
+          {
+            "es": "APIs REST",
+            "en": "REST APIs"
+          }
+        ],
+        "projects": [
+          "FastAPI",
+          "Flask"
+        ],
+        "learning": [
+          "Spring Boot",
+          "Jakarta"
+        ]
+      },
+      {
+        "name": {
+          "es": "Frontend",
+          "en": "Frontend"
+        },
+        "work": [],
+        "projects": [
+          "React"
+        ],
+        "learning": []
+      },
+      {
+        "name": {
+          "es": "Datos",
+          "en": "Data"
+        },
+        "work": [
+          "PostgreSQL",
+          "ClickHouse"
+        ],
+        "projects": [
+          "MySQL"
+        ],
+        "learning": []
+      },
+      {
+        "name": {
+          "es": "IA",
+          "en": "AI"
+        },
+        "work": [
+          "Google ADK",
+          {
+            "es": "Integración de LLMs",
+            "en": "LLM integration"
+          },
+          {
+            "es": "Sistemas multiagente",
+            "en": "Multi-agent systems"
+          },
+          "Prompt engineering"
+        ],
+        "projects": [
+          "VLMs",
+          "Ollama"
+        ],
+        "learning": []
+      },
+      {
+        "name": {
+          "es": "Calidad",
+          "en": "Quality"
+        },
+        "work": [
+          "Pytest",
+          {
+            "es": "Pruebas de integración",
+            "en": "Integration testing"
+          }
+        ],
+        "projects": [],
+        "learning": [
+          "Mockito"
+        ]
+      },
+      {
+        "name": {
+          "es": "Herramientas",
+          "en": "Tools"
+        },
+        "work": [
+          "Git",
+          "GitLab CI/CD",
+          "Poetry"
+        ],
+        "projects": [
+          "Docker"
+        ],
+        "learning": []
+      },
+      {
+        "name": {
+          "es": "Metodología",
+          "en": "Methodology"
+        },
+        "work": [
+          "Agile (Scrum/Kanban)"
+        ],
+        "projects": [],
+        "learning": []
+      }
+    ]
+  },
+  "languages": [
+    {
+      "name": {
+        "es": "Español",
+        "en": "Spanish"
+      },
+      "level": {
+        "es": "Nativo",
+        "en": "Native"
+      }
+    },
+    {
+      "name": {
+        "es": "Inglés",
+        "en": "English"
+      },
+      "level": {
+        "es": "C1 · Oxford Test of English Advanced (2026)",
+        "en": "C1 · Oxford Test of English Advanced (2026)"
+      }
+    }
+  ],
+  "looking_for": {
+    "es": "Primer puesto como ingeniero junior de backend (Python/Java) o de IA aplicada (LLMs, agentes, visión). En remoto o en Alicante, Valencia, Murcia o Europa.",
+    "en": "First role as a junior backend engineer (Python/Java) or applied AI engineer (LLMs, agents, vision). Remote, or in Alicante, Valencia, Murcia or elsewhere in Europe."
+  },
+  "site": "https://saulcone.github.io"
+}
