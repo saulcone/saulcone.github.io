@@ -1,6 +1,6 @@
 # 03 · Proyectos (casos de estudio)
 
-Orden de aparición en la web: TPV Virtual, TFG e inventario como destacados (los fijados en GitHub); debajo, Habit Tracker y este portfolio. El TFG tiene además su sección en detalle. Los proyectos de empresa (Beply, NAX Solutions) no van aquí: se cuentan en Experiencia.
+Van en el carrusel de proyectos, en este orden: TPV Virtual, inventario, Habit Tracker y este portfolio. El TFG no va en el carrusel: tiene su propio apartado justo debajo. Los proyectos de empresa (Beply, NAX Solutions) no van aquí: se cuentan en Experiencia.
 
 Estructura recomendada para cada caso de estudio:
 1. **Problema** (1-2 frases).

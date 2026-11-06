@@ -5,9 +5,9 @@ Profesional, limpio y técnico, con personalidad pero sin distraer. Debe parecer
 
 ## Estructura (una sola página + detalle de proyecto)
 1. **Hero:** nombre, rol, frase, estado de disponibilidad y tres botones.
-2. **Proyectos destacados:** tres tarjetas con foto, chips de stack y enlaces (TPV Virtual, TFG e inventario), y debajo «Otros proyectos».
-3. **Experiencia:** línea temporal sencilla (NAX, Beply).
-4. **TFG en detalle:** vídeo, bucle See → Point → Fly, resultados y limitaciones.
+2. **Proyectos:** carrusel con los proyectos de `data/profile.json`, menos el TFG: foto, chips de stack y enlaces.
+3. **TFG:** apartado propio con vídeo, foto, bucle See → Point → Fly, resultados y limitaciones.
+4. **Experiencia:** línea temporal sencilla (NAX, Beply).
 5. **Habilidades:** agrupadas por categoría con la distinción "trabajo real" / "proyectos" / "aprendiendo".
 6. **Formación e idiomas:** bloque compacto.
 7. **Contacto:** email, LinkedIn, GitHub y botón de CV.
@@ -16,8 +16,8 @@ Navegación fija arriba con anclas a cada sección y selector ES/EN.
 
 ## Estilo visual
 - Tipografía: una sans moderna para texto (p. ej., Inter o similar) y una monoespaciada para detalles técnicos (chips, fechas).
-- Color: fondo neutro y un color propio por sección (azul, verde azulado, violeta, naranja, granate y pizarra), siempre con contraste AA. Modo claro y oscuro siguiendo la preferencia del sistema.
-- Contraste alto: cada sección va en su propio panel con borde sobre un fondo más oscuro, y sus bloques en recuadros. Hero y contacto son paneles oscuros. Los componentes tienen estado hover y respetan `prefers-reduced-motion`.
+- Color: paleta suave de beige claro y blanco, con un único acento verde azulado. Nada de un color por sección ni bloques oscuros.
+- Cada sección va en su propio panel, alternando blanco y beige para separarlas con un contraste ligero, y sus bloques en recuadros. Los componentes tienen estado hover y respetan `prefers-reduced-motion`.
 - Espaciado generoso, máximo ~1100 px de ancho de contenido.
 - Iconos sencillos y coherentes (una sola librería).
 - Animaciones mínimas: aparición suave al hacer scroll, respetando `prefers-reduced-motion`.
@@ -35,4 +35,4 @@ Hero con vídeo · Problema · Diagrama del bucle See → Point → Fly (SVG) ·
 Móvil primero. A partir de ~360 px de ancho, sin scroll horizontal. Las tarjetas pasan a una columna.
 
 ## Evitar
-Barras de porcentaje de habilidades, carruseles, música, animaciones pesadas, plantillas que se noten, textos genéricos de relleno y fotos de stock.
+Barras de porcentaje de habilidades, música, animaciones pesadas, plantillas que se noten, textos genéricos de relleno y fotos de stock.

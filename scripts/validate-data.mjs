@@ -42,7 +42,6 @@ const schema = z.object({
     z.object({
       id: z.string(),
       featured: z.boolean(),
-      pinned: z.boolean().optional(),
       image: z.object({ src: z.string().startsWith("/"), alt: bilingual }).optional(),
       contribution: bilingual.optional(),
       title: bilingual,
@@ -77,9 +76,6 @@ if (profile.projects.filter((project) => project.featured).length !== 1) {
 }
 
 for (const project of profile.projects) {
-  if (project.pinned && !project.image) {
-    errors.push(`projects.${project.id}: pinned projects need an image`);
-  }
   if (project.image && !existsSync(new URL(`../public${project.image.src}`, import.meta.url))) {
     errors.push(`projects.${project.id}: missing image ${project.image.src}`);
   }
