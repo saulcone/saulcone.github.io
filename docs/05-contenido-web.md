@@ -50,5 +50,5 @@ Los proyectos de empresa no aparecen aquí: se cuentan en Experiencia.
 ## SEO
 - Title ES: Saúl Conejo Mínguez · Ingeniero de software junior (Backend e IA)
 - Title EN: Saúl Conejo Mínguez · Junior Software Engineer (Backend & AI)
-- Description ES: Ingeniero de software junior en backend con Python e IA aplicada. Experiencia con Django, PostgreSQL, sistemas multiagente con LLMs y visión por computador.
-- Description EN: Junior software engineer in Python backend and applied AI. Experience with Django, PostgreSQL, multi-agent LLM systems and computer vision.
+- Description ES: Saúl Conejo Mínguez, ingeniero de software junior en backend con Python e IA aplicada: Django, PostgreSQL, sistemas multiagente con LLMs y visión por computador.
+- Description EN: Saúl Conejo Mínguez, junior software engineer in Python backend and applied AI: Django, PostgreSQL, multi-agent LLM systems and computer vision.

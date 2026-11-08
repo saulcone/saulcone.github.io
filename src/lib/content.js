@@ -8,6 +8,9 @@ export { profile };
 
 export const getText = (lang) => dictionaries[lang];
 
+/** The name without accents, as many people type it into a search box. */
+export const plainName = profile.name.normalize("NFD").replace(/\p{Diacritic}/gu, "");
+
 export const homePath = (lang) => (lang === "en" ? "/en/" : "/");
 
 /** Returns a plain string, or the entry for `lang` in a bilingual object. */
