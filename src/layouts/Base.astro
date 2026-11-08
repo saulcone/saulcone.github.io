@@ -65,6 +65,13 @@ const website = {
 
     <script type="application/ld+json" set:html={JSON.stringify(person)} />
     <script type="application/ld+json" set:html={JSON.stringify(website)} />
+    <!-- Visit counter without cookies; the dashboard is at saulcone.goatcounter.com -->
+    <script
+      is:inline
+      async
+      data-goatcounter="https://saulcone.goatcounter.com/count"
+      src="https://gc.zgo.at/count.js"
+    ></script>
   </head>
   <body>
     <slot />

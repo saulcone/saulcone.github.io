@@ -10,7 +10,13 @@ const text = getText(lang);
 {isPending(file) ? (
   <span class="pending">{file}</span>
 ) : (
-  <a class:list={["btn", { "btn--primary": primary }]} href={file} download>
+  <a
+    class:list={["btn", { "btn--primary": primary }]}
+    href={file}
+    download
+    data-goatcounter-click={`descarga-cv-${lang}`}
+    data-goatcounter-title={`Descarga del CV (${lang.toUpperCase()})`}
+  >
     <Icon name="download" />
     {text.hero.cv}
   </a>
