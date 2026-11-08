@@ -1,5 +1,6 @@
 {
   "name": "Saúl Conejo Mínguez",
+  "photo": "/img/saul.webp",
   "role": {
     "es": "Ingeniero de software junior · Backend e IA",
     "en": "Junior Software Engineer · Backend & AI"
@@ -527,6 +528,16 @@
       "level": {
         "es": "C1 · Oxford Test of English Advanced (2026)",
         "en": "C1 · Oxford Test of English Advanced (2026)"
+      }
+    },
+    {
+      "name": {
+        "es": "Valenciano",
+        "en": "Valencian"
+      },
+      "level": {
+        "es": "C1 · Certificado oficial de la JQCV (2024)",
+        "en": "C1 · Official JQCV certificate (2024)"
       }
     }
   ],

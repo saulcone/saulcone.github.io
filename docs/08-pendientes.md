@@ -5,7 +5,6 @@ El agente NO debe inventar nada de esta lista. Usa `[[PENDIENTE: ...]]` en la we
 ## Para mejorar los casos de estudio
 - [ ] TFG: ¿se puede publicar la memoria o un resumen? Si se publica, valorar quitar la dedicatoria y los agradecimientos personales. ¿Nota del TFG, si quiere mostrarla?
 - [ ] Confirmar si usó Docker en las prácticas o solo en proyectos.
-- [ ] Foto profesional (opcional pero recomendable).
 
 ## Opcional
 - [ ] Dominio propio.

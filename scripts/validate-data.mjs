@@ -12,6 +12,7 @@ const bilingualList = z.object({ es: z.array(z.string()), en: z.array(z.string()
 
 const schema = z.object({
   name: z.string().min(1),
+  photo: z.string().startsWith("/").optional(),
   site: z.url(),
   role: bilingual,
   location: bilingual,
@@ -73,6 +74,10 @@ if (!parsed.success) {
 
 if (profile.projects.filter((project) => project.featured).length !== 1) {
   errors.push("projects: there must be exactly one featured project");
+}
+
+if (profile.photo && !existsSync(new URL(`../public${profile.photo}`, import.meta.url))) {
+  errors.push(`photo: missing file ${profile.photo}`);
 }
 
 for (const project of profile.projects) {

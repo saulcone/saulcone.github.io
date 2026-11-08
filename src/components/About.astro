@@ -1,5 +1,5 @@
 ---
-import { getText } from "../lib/content.js";
+import { getText, profile } from "../lib/content.js";
 
 const { lang } = Astro.props;
 const text = getText(lang).about;
@@ -10,10 +10,23 @@ const text = getText(lang).about;
     <div class="section__head">
       <h2 id="about-title">{text.title}</h2>
     </div>
-    <div class="prose">
-      {text.paragraphs.map((paragraph) => (
-        <p>{paragraph}</p>
-      ))}
+    <div class="about">
+      {profile.photo && (
+        <img
+          class="about__photo"
+          src={profile.photo}
+          alt={profile.name}
+          width="160"
+          height="160"
+          loading="lazy"
+          decoding="async"
+        />
+      )}
+      <div class="prose">
+        {text.paragraphs.map((paragraph) => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
     </div>
   </div>
 </section>

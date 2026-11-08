@@ -21,3 +21,4 @@ Notas:
 ## Idiomas
 - Español: nativo.
 - Inglés: C1, Oxford Test of English Advanced (marzo de 2026). El certificado no se publica: incluye la fecha de nacimiento.
+- Valenciano: C1, certificado oficial de la Junta Qualificadora de Coneixements de Valencià (noviembre de 2024). El certificado no se publica: incluye el DNI y un código CSV que permite descargarlo.

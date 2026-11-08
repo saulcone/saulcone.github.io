@@ -844,6 +844,35 @@ a:hover {
 }
 
 /* About */
+.about {
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.about__photo {
+  width: 7.5rem;
+  height: 7.5rem;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 1px var(--line),
+    0 4px 12px rgb(70 60 40 / 14%);
+  object-fit: cover;
+}
+
+@media (min-width: 760px) {
+  .about {
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .about__photo {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
 .prose {
   display: grid;
   gap: 1rem;
