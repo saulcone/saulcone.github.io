@@ -7,8 +7,7 @@
   "a11y": {
     "skip": "Skip to content",
     "nav": "Main navigation",
-    "switchTo": "ES: view this page in Spanish",
-    "switchLabel": "ES",
+    "language": "Language",
     "newTab": "(opens in a new tab)"
   },
   "nav": {
