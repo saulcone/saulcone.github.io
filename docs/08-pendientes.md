@@ -3,7 +3,7 @@
 El agente NO debe inventar nada de esta lista. Usa `[[PENDIENTE: ...]]` en la web hasta que Saúl lo aporte, y avisa de que falta. El deploy falla si queda algún marcador en el build.
 
 ## Para mejorar los casos de estudio
-- [ ] TFG: actualizar el README de `nuevo_flujo_desarrollo` para explicar el trabajo final.
+- [x] TFG: README de `nuevo_flujo_desarrollo` reescrito con el trabajo final (2026-11-08).
 - [ ] TFG: ¿se puede publicar la memoria o un resumen? Si se publica, valorar quitar la dedicatoria y los agradecimientos personales. ¿Nota del TFG, si quiere mostrarla?
 - [ ] Confirmar si usó Docker en las prácticas o solo en proyectos.
 - [ ] Foto profesional (opcional pero recomendable).
