@@ -1,5 +1,5 @@
 ---
-import { getText, profile } from "../lib/content.js";
+import { getText, plainName, profile } from "../lib/content.js";
 
 const { lang } = Astro.props;
 const text = getText(lang).footer;
@@ -9,7 +9,7 @@ const repo = profile.projects.find((project) => project.id === "portfolio").link
 <footer class="site-footer">
   <div class="container">
     <p>
-      © 2026 {profile.name} · {text.built} · <a href={repo}>{text.code}</a>
+      © 2026 {profile.name} ({plainName}) · {text.built} · <a href={repo}>{text.code}</a>
     </p>
   </div>
 </footer>
